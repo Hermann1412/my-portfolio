@@ -1,0 +1,138 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(30, 41, 59, 0.3) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 16px;
+  padding: 60px;
+  margin: 100px 10%;
+  z-index: 1;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+
+.aboutImage {
+  width: 35%;
+  min-width: 280px;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+}
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  list-style: none;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.aboutItem:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateX(8px);
+}
+
+.aboutItem img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+.aboutItemText h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.aboutItemText p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 60px 10%;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItems {
+    margin-top: 0;
+    gap: 16px;
+  }
+
+  .aboutItem {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItems {
+    margin-top: 29px;
+  }
+
+  .aboutItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

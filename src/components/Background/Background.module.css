@@ -1,0 +1,78 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  margin-top: 80px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 80px;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  font-family: var(--font-roboto);
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.building {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.CLBuilding {
+  display: flex;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.CLBuilding:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+}
+
+.AUbuilding {
+  display: flex;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.AUbuilding:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+}
+
+@media screen and (max-width: 830px) {
+  .building {
+    grid-template-columns: 1fr;
+  }
+
+  .CLBuilding,
+  .AUbuilding {
+    min-height: 300px;
+  }
+}

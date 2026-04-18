@@ -2,10 +2,9 @@
 
 .container {
   color: var(--color-text);
-  margin-top: 100px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 80px;
+  margin: 100px auto 80px;
+  max-width: var(--section-max-width);
+  padding: 0 var(--section-inline-padding);
 }
 
 .title {
@@ -13,187 +12,137 @@
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 48px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--heading-from) 0%, var(--heading-to) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.skills {
+/* ── Marquee ─────────────────────────────────── */
+.marqueeWrapper {
+  position: relative;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  overflow: hidden;
+  padding: 8px 0 24px;
+  /* Fade edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }
 
+.marqueeWrapper:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  gap: 32px;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Individual skill tile */
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .skillImageContainer {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, rgba(189, 93, 46, 0.08) 0%, rgba(15, 118, 110, 0.08) 100%);
+  border: 1px solid rgba(143, 111, 83, 0.28);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
-  transition: all 0.3s ease;
+  width: 88px;
+  height: 88px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .skill:hover .skillImageContainer {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(16, 185, 129, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(189, 93, 46, 0.16) 0%, rgba(15, 118, 110, 0.14) 100%);
   border-color: var(--color-primary);
   transform: translateY(-4px);
 }
 
 .skillImageContainer img {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
-  filter: none;
 }
 
 .skill p {
-  font-size: 14px;
+  font-size: 12.5px;
   font-family: var(--font-roboto);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text);
+  white-space: nowrap;
 }
 
+/* ── Message card ─────────────────────────────── */
 .message {
-  flex: 1;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  margin-top: 40px;
+  background: linear-gradient(135deg, rgba(255, 250, 244, 0.92) 0%, rgba(248, 239, 231, 0.9) 100%);
+  border: 1px solid var(--surface-border);
   border-radius: 12px;
-  padding: 28px;
-  transition: all 0.3s ease;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .message:hover {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, rgba(246, 235, 224, 0.95) 0%, rgba(237, 247, 245, 0.9) 100%);
+  border-color: rgba(143, 111, 83, 0.4);
 }
 
 .message p {
   font-size: 16px;
   font-family: var(--font-roboto);
   color: var(--color-text-secondary);
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
-.history {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.historyItem {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 16px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  border-radius: 12px;
-  padding: 20px;
-  transition: all 0.3s ease;
-}
-
-.historyItem:hover {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateX(8px);
-}
-
-.historyItem img {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  object-fit: contain;
-  filter: none;
-  margin-top: 4px;
-}
-
-.historyItemDetails {
-  font-family: var(--font-roboto);
-  flex: 1;
-}
-
-.historyItemDetails h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 4px;
-}
-
-.historyItemDetails p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--color-text-secondary);
-  margin-bottom: 8px;
-}
-
-.historyItemDetails ul {
-  margin-top: 8px;
-  list-style-position: inside;
-  font-size: 13px;
-  list-style-type: disc;
-  color: var(--color-text-secondary);
-}
-
-.historyItemDetails li {
-  margin-left: 8px;
-  line-height: 1.4;
-}
-
+/* ── Responsive ───────────────────────────────── */
 @media screen and (max-width: 830px) {
-  .content {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .container {
+    margin-top: 72px;
   }
 
-  .skills {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+  .marqueeTrack {
+    gap: 22px;
   }
 
-  .history {
-    width: 100%;
-    gap: 12px;
-  }
-}
-
-@media screen and (max-width: 830px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-    gap: 34;
+  .skillImageContainer {
+    width: 72px;
+    height: 72px;
   }
 
-  .skills {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+  .skillImageContainer img {
+    width: 42px;
+    height: 42px;
   }
 
-  .history {
-    width: 100%;
-    gap: 9px;
+  .message {
+    padding: 22px 20px;
   }
-  
 }

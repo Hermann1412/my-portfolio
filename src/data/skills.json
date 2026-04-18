@@ -8,16 +8,16 @@
     "imageSrc": "skills/css.png"
   },
   {
+    "title": "JavaScript",
+    "imageSrc": "skills/javascript.png"
+  },
+  {
     "title": "React",
     "imageSrc": "skills/react.png"
   },
   {
     "title": "Node",
     "imageSrc": "skills/node.png"
-  },
-  {
-    "title": "Json",
-    "imageSrc": "skills/json.png"
   },
   {
     "title": "MongoDB",
@@ -28,11 +28,43 @@
     "imageSrc": "skills/mysql.png"
   },
   {
-    "title": "Unity",
-    "imageSrc": "skills/unity.png"
+    "title": "Python",
+    "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "PHP",
+    "imageSrc": "skills/php.png"
   },
   {
     "title": "Kotlin",
     "imageSrc": "skills/Kotlin.png"
+  },
+  {
+    "title": "Unity",
+    "imageSrc": "skills/unity.png"
+  },
+  {
+    "title": "Cisco Packet Tracer",
+    "imageSrc": "skills/cisco.png"
+  },
+  {
+    "title": "Wireshark",
+    "imageSrc": "skills/wireshark.png"
+  },
+  {
+    "title": "Nmap",
+    "imageSrc": "skills/nmap.png"
+  },
+  {
+    "title": "Burp Suite",
+    "imageSrc": "skills/burp.png"
+  },
+  {
+    "title": "Metasploit",
+    "imageSrc": "skills/metasploit.png"
+  },
+  {
+    "title": "Kali Linux",
+    "imageSrc": "skills/kali.png"
   }
 ]

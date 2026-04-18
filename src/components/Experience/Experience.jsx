@@ -1,29 +1,34 @@
-import React from "react";
+import { useContext } from "react";
 
-import styles from "./Experience.module.css"
+import styles from "./Experience.module.css";
 import skills from "../../data/skills.json";
-import history from "../../data/history.json"
 import { getImageUrl } from "../../utils";
+import { LanguageContext } from "../../LanguageContext.jsx";
 
 export const Experience = () => {
-  return <section className={styles.container} id="experience">
-    <h2 className={styles.title}>Experience</h2>
-    <div className={styles.content}>
-      <div className={styles.skills}>{
-          skills.map((skill, id) =>{
-            return (
+  const { t } = useContext(LanguageContext);
+
+  return (
+    <section className={styles.container} id="experience">
+      <h2 className={styles.title}>{t.experience.title}</h2>
+
+      {/* Infinite scrolling marquee */}
+      <div className={styles.marqueeWrapper} aria-label="Skills">
+        <div className={styles.marqueeTrack}>
+          {[...skills, ...skills].map((skill, id) => (
             <div key={id} className={styles.skill}>
               <div className={styles.skillImageContainer}>
-                <img src={getImageUrl(skill.imageSrc)} alt={skill.title}/>
+                <img src={getImageUrl(skill.imageSrc)} alt={skill.title} />
               </div>
-              <p >{skill.title}</p>
+              <p>{skill.title}</p>
             </div>
-            );
-        })}
+          ))}
+        </div>
       </div>
+
       <div className={styles.message}>
-        <p>While I am at the beginning of my professional career, I have built a strong foundation through my studies and hands-on projects. I am eager to apply my knowledge in a real-world environment and to continue developing the skills required for my field. The projects I have completed reflect my dedication, technical ability, and readiness to add value to your organization. 😊</p>
+        <p>{t.experience.message}</p>
       </div>
-    </div>
-  </section>;
+    </section>
+  );
 };

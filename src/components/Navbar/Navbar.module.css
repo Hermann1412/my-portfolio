@@ -1,15 +1,16 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-xl) 10%;
-  z-index: 2;
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 20px var(--section-inline-padding);
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(252, 247, 240, 0.9) 0%, rgba(252, 247, 240, 0.65) 100%);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--surface-border);
 }
 
 .title {
@@ -17,20 +18,25 @@
   font-weight: 700;
   text-decoration: none;
   color: var(--color-text);
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--heading-from) 0%, var(--heading-to) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.5px;
+  font-family: var(--font-outfit);
 }
 
 .menu {
   display: flex;
 }
 
+.menuBtn {
+  display: none;
+}
+
 .menuItems {
   display: flex;
-  gap: 40px;
+  gap: 28px;
   list-style: none;
 }
 
@@ -43,6 +49,65 @@
   padding-bottom: 4px;
 }
 
+.copyBtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border: 1px solid rgba(147, 64, 26, 0.45);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: 0 8px 22px rgba(147, 64, 26, 0.22);
+}
+
+.copyBtn:hover {
+  border-color: rgba(147, 64, 26, 0.7);
+  transform: translateY(-1px);
+}
+
+.copied {
+  background: linear-gradient(135deg, #168075, #0f5f57);
+  border-color: rgba(15, 118, 110, 0.85);
+  color: #ebfff8;
+}
+
+.themeBtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--surface-2);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.themeBtn:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 16px rgba(147, 64, 26, 0.15);
+  transform: translateY(-1px);
+}
+
+.langBtn {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--color-text);
+  background: var(--surface-2);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.langBtn:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.15);
+  transform: translateY(-1px);
+}
+
 .menuItems a::after {
   content: "";
   position: absolute;
@@ -50,8 +115,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, var(--heading-from), var(--heading-to));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menuItems a:hover::after {
@@ -67,8 +132,8 @@
 
   .menu {
     position: fixed;
-    right: 20px;
-    top: 70px;
+    right: var(--section-inline-padding);
+    top: 72px;
     flex-direction: column;
     align-items: flex-end;
     gap: 0;
@@ -88,17 +153,17 @@
     align-items: stretch;
     gap: 0;
     border-radius: 12px;
-    background: rgba(30, 41, 59, 0.95);
+    background: rgba(252, 247, 240, 0.97);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid var(--surface-border);
     padding: 12px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-soft);
     min-width: 200px;
     margin-top: 10px;
   }
 
   .menuItems li {
-    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+    border-bottom: 1px solid rgba(143, 111, 83, 0.2);
   }
 
   .menuItems li:last-child {
@@ -109,6 +174,27 @@
     display: block;
     padding: 12px 24px;
     font-size: 16px;
+  }
+
+  .copyBtn {
+    margin: 12px 16px 0;
+    width: calc(100% - 32px);
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+
+  .themeBtn {
+    margin: 8px 16px 0;
+    width: calc(100% - 32px);
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+
+  .langBtn {
+    margin: 8px 16px 0;
+    width: calc(100% - 32px);
+    border-radius: 10px;
+    padding: 10px 14px;
   }
 
   .menuOpen {

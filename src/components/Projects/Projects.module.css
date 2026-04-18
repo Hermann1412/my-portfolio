@@ -1,27 +1,105 @@
 @import "../../vars.css";
 
 .container {
-  margin-top: 100px;
+  margin: 100px auto 80px;
   color: var(--color-text);
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 80px;
+  max-width: var(--section-max-width);
+  padding: 0 var(--section-inline-padding);
 }
 
 .title {
   font-size: 42px;
   font-weight: 700;
-  margin-bottom: 48px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, var(--heading-from) 0%, var(--heading-to) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Category filter bar */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface-2);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.filterBtn:hover {
+  border-color: rgba(189, 93, 46, 0.4);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.filterActive {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-on-primary);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(147, 64, 26, 0.26);
+}
+
+.filterActive:hover {
+  color: var(--color-on-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(147, 64, 26, 0.34);
+}
+
+.filterCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0 4px;
+}
+
+.filterActive .filterCount {
+  background: rgba(255, 255, 255, 0.28);
+  color: var(--color-on-primary);
+}
+
+/* Project grid */
 .projects {
-  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
   width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    margin-top: 72px;
+  }
+
+  .filters {
+    gap: 6px;
+  }
+
+  .filterBtn {
+    font-size: 12.5px;
+    padding: 7px 14px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }

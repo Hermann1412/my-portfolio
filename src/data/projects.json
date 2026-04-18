@@ -4,6 +4,7 @@
     "imageSrc": "projects/Dictionary_APP.png",
     "description": "A comprehensive dictionary application built with Kotlin featuring word search, definitions, and pronunciation guides.",
     "skills": ["Kotlin", "Java"],
+    "category": "Mobile",
     "demo": "https://github.com/Hermann1412/Dictionary-APP/blob/main/picturesProff/photo_2024-06-08_15-12-49.jpg",
     "source": "https://github.com/Hermann1412/Dictionary-APP.git"
   },
@@ -12,6 +13,7 @@
     "imageSrc": "projects/squareRoom.png",
     "description": "An interactive 3D square room environment built in Unity with realistic physics and visual effects.",
     "skills": ["Unity", "C#"],
+    "category": "Game Dev",
     "demo": "https://play.unity.com/mg/other/my-square-room",
     "source": "https://www.github.com"
   },
@@ -20,15 +22,64 @@
     "imageSrc": "projects/Hermann.png",
     "description": "A fully functional e-commerce platform replicating Amazon's design and user interface with modern web technologies.",
     "skills": ["HTML", "CSS", "JavaScript"],
+    "category": "Web Dev",
     "demo": "https://hermann1412.github.io/Anazon_copy/",
     "source": "https://github.com/Hermann1412/Anazon_copy"
   },
   {
     "title": "ODAC - Object Detection & Classification",
-    "imageSrc": "projects/cctv.jpg",
+    "imageSrc": "projects/cctv.png",
     "description": "An AI-powered system for real-time object detection and classification using CCTV cameras. Implemented with machine learning for educational environments.",
     "skills": ["Python", "HTML", "CSS", "MySQL"],
+    "category": "AI / ML",
     "demo": "https://github.com/Hermann1412/-ODAC-project/blob/main/final_pro_result/Screenshot%202025-03-20%20150225.png",
-    "source": "https://github.com/Hermann1412/-ODAC-project"
+    "source": "https://github.com/Hermann1412/-ODAC-project",
+    "report": "https://github.com/Hermann1412/-ODAC-project/blob/main/report/NCEE21_Full-Manuscript_AI_Object-Detection_Tshikala%20et%20al%20(1).pdf",
+    "certificate": "https://github.com/Hermann1412/-ODAC-project/blob/main/report/%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B4%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%9A%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%2021.pdf"
+  },
+  {
+    "title": "HopeSpring",
+    "imageSrc": "projects/HopeSpring.png",
+    "description": "A social chat platform where users connect and communicate in real time through a clean, community-driven environment.",
+    "skills": ["PHP", "MySQL", "HTML", "CSS"],
+    "category": "Web Dev",
+    "demo": "https://hopespring.infinityfreeapp.com/",
+    "source": "https://github.com/Hermann1412/HopeSpring_Project/tree/main",
+    "report": "https://github.com/Hermann1412/HopeSpring_Project/blob/main/README_FOLDER/REPORT.md"
+  },
+  {
+    "title": "Resume Builder",
+    "imageSrc": "projects/resume.png",
+    "description": "A full-stack AI-powered resume builder with user authentication, live editing, image upload, and one-click PDF export. Built with React, MongoDB, OpenAI, and deployed on Vercel and Render.",
+    "skills": ["ReactJs", "MongoDB", "OpenAI", "Vercel"],
+    "category": "Web Dev",
+    "demo": "https://resume-builder-zne9-ay6d67d1y-hermann1412s-projects.vercel.app/",
+    "source": "https://github.com/Hermann1412/Resume-Builder/tree/main"
+  },
+  {
+    "title": "Data Warehouse",
+    "imageSrc": "projects/data.png",
+    "description": "A structured data warehousing solution designed to efficiently store and query large volumes of data for business intelligence and analytics reporting.",
+    "skills": ["MySQL", "T-SQL"],
+    "category": "Database",
+    "source": "https://github.com/Hermann1412/sql-data-warehouse-project",
+    "report": "https://github.com/Hermann1412/sql-data-warehouse-project/blob/main/README.md"
+  },
+  {
+    "title": "Hotel Management Network",
+    "imageSrc": "projects/Hotel.png",
+    "description": "A complete network topology designed for a hotel environment, ensuring efficient communication and data exchange between all departments using Cisco technologies.",
+    "skills": ["Cisco Packet Tracer"],
+    "category": "Networking",
+    "source": "https://github.com/Hermann1412/Hotel-network-Management-System/blob/main/Hotel%20Network%20Management.pkt"
+  },
+  {
+    "title": "Network Design & Security",
+    "imageSrc": "projects/Networking.png",
+    "description": "Designed and secured TechSafe Ltd's full network infrastructure — including subnetting, Wireshark traffic analysis, and firewall configuration to defend against cyber threats.",
+    "skills": ["Cisco Packet Tracer", "Wireshark", "Nmap"],
+    "category": "Security",
+    "source": "https://github.com/Hermann1412/Network-design-and-Network-Security",
+    "report": "https://github.com/Hermann1412/Network-design-and-Network-Security/blob/main/Network_design_and_Network_security_.pdf"
   }
 ]

@@ -2,11 +2,10 @@
 
 .container {
   position: relative;
-  margin-top: 80px;
+  margin: 80px auto;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 80px;
+  max-width: var(--section-max-width);
+  padding: 0 var(--section-inline-padding);
 }
 
 .title {
@@ -14,7 +13,7 @@
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--heading-from) 0%, var(--heading-to) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -39,34 +38,50 @@
 .CLBuilding {
   display: flex;
   min-height: 400px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, rgba(255, 250, 244, 0.92) 0%, rgba(248, 239, 231, 0.9) 100%);
+  border: 1px solid var(--surface-border);
   border-radius: 12px;
-  padding: 24px;
+  padding: 16px;
   transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
 
 .CLBuilding:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+  border-color: rgba(143, 111, 83, 0.4);
+  box-shadow: 0 10px 26px rgba(31, 41, 51, 0.12);
 }
 
 .AUbuilding {
   display: flex;
   min-height: 400px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, rgba(255, 250, 244, 0.92) 0%, rgba(248, 239, 231, 0.9) 100%);
+  border: 1px solid var(--surface-border);
   border-radius: 12px;
-  padding: 24px;
+  padding: 16px;
   transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
 
 .AUbuilding:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+  border-color: rgba(143, 111, 83, 0.4);
+  box-shadow: 0 10px 26px rgba(31, 41, 51, 0.12);
+}
+
+.CLBuilding img,
+.AUbuilding img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 830px) {
+  .container {
+    margin-top: 72px;
+  }
+
   .building {
     grid-template-columns: 1fr;
   }

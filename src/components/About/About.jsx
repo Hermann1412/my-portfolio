@@ -1,68 +1,42 @@
-import React from "react";
+import { useContext } from "react";
 
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
+import { LanguageContext } from "../../LanguageContext.jsx";
 
+const ITEM_ICONS = [
+  { src: "about/cursorIcon.png", alt: "Frontend icon" },
+  { src: "about/serverIcon.png", alt: "Backend icon" },
+  { src: "about/uiIcon.png",     alt: "UI Design icon" },
+  { src: "about/unity1.png",     alt: "Game Dev icon" },
+  { src: "about/serverIcon.png", alt: "Cybersecurity icon" },
+];
 
 export const About = () => {
+  const { t } = useContext(LanguageContext);
+
   return (
     <section className={styles.container} id="about">
-      <h2 className={styles.title}>About</h2>
+      <h2 className={styles.title}>{t.about.title}</h2>
       <div className={styles.content}>
-        <img 
-          src={getImageUrl("about/hermann1.png")} 
+        <img
+          src={getImageUrl("about/hermann1.png")}
           alt="Me sitting with a laptop"
           className={styles.aboutImage}
         />
         <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
-            <img 
-              src={getImageUrl("about/cursorIcon.png")}
-              alt="Cursor icon"
-            /> 
-            <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
-              <p>
-                I'm a frontend developer with experience in building responsive and optimized sites.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img 
-              src={getImageUrl("about/serverIcon.png")}
-              alt="Server icon"
-            /> 
-            <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
-              <p>
-                I have experience developping fast and optimized back-end systems and APIs.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img 
-              src={getImageUrl("about/uiIcon.png")}
-              alt="Ui icon"
-            /> 
-            <div className={styles.aboutItemText}>
-              <h3>UI Designer</h3>
-              <p>
-                I have designed multiple landing pages and have created design systems as well.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img 
-              src={getImageUrl("about/cursorIcon.png")}
-              alt="unity icon"
-            /> 
-            <div className={styles.aboutItemText}>
-              <h3>Unity Developer</h3>
-              <p>
-                I have worked on few unity Project
-              </p>
-            </div>
-          </li>
+          {t.about.items.map((item, i) => (
+            <li key={i} className={styles.aboutItem}>
+              <img
+                src={getImageUrl(ITEM_ICONS[i]?.src || "about/cursorIcon.png")}
+                alt={ITEM_ICONS[i]?.alt || "icon"}
+              />
+              <div className={styles.aboutItemText}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

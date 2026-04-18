@@ -1,19 +1,31 @@
 :root {
   /*Color*/
-  --color-text: #ffffff;
-  --color-text-secondary: #b0b0b0;
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-secondary: #1e293b;
-  --color-dark: #0f172a;
-  --color-bg: #030712;
-  --color-accent: #10b981;
+  --color-text: #1f2933;
+  --color-text-secondary: #445565;       /* was #5a6573 — darkened for readability */
+  --color-primary: #bd5d2e;
+  --color-primary-dark: #93401a;
+  --color-secondary: #f7efe5;
+  --color-dark: #13202b;
+  --color-bg: #f6f1e8;
+  --color-accent: #0f766e;
   --color-danger: #ef4444;
+  --color-on-primary: #fffaf5;
+
+  /* Gradient text — separate from button/border colours */
+  --heading-from: #8b3a10;             /* dark orange, ~9:1 on cream  */
+  --heading-to:   #0a5752;             /* dark teal,   ~8:1 on cream  */
+
+  --surface-1: rgba(255, 250, 244, 0.72);
+  --surface-2: rgba(255, 255, 255, 0.9);
+  --surface-border: rgba(143, 111, 83, 0.28);
+  --shadow-soft: 0 14px 36px rgba(31, 41, 51, 0.1);
+  --section-max-width: 1180px;
+  --section-inline-padding: clamp(16px, 5vw, 64px);
 
   /*font*/
-  --font-roboto: "Roboto";
-  --font-outfit: "Outfit";
-  
+  --font-roboto: "Public Sans";
+  --font-outfit: "Sora";
+
   /*spacing*/
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -21,4 +33,22 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  --color-text: #e8e4e0;
+  --color-text-secondary: #c8c4c0;       /* was #b8b4b0 — lightened for dark bg */
+  --color-bg: #1a1410;
+  --color-secondary: #2a241a;
+  --color-dark: #0f0c0a;
+
+  /* Gradient text flips to bright colours for dark bg */
+  --heading-from: #e8793e;             /* bright orange, ~7:1 on dark bg */
+  --heading-to:   #20c4b0;             /* bright teal,   ~9:1 on dark bg */
+
+  --surface-1: rgba(30, 24, 18, 0.72);
+  --surface-2: rgba(40, 34, 28, 0.9);
+  --surface-border: rgba(189, 93, 46, 0.28);
+  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.3);
 }

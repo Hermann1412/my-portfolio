@@ -1,22 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body {
   background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(189, 93, 46, 0.12), transparent 28%),
+    radial-gradient(circle at 86% 6%, rgba(15, 118, 110, 0.11), transparent 24%),
+    radial-gradient(circle at 78% 85%, rgba(147, 64, 26, 0.08), transparent 30%);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.65;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 a {
   transition: all 0.3s ease;
+  color: inherit;
 }
 
 button {
@@ -28,4 +42,8 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+section {
+  scroll-margin-top: 100px;
 }

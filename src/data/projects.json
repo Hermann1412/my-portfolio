@@ -18,15 +18,6 @@
     "source": "https://www.github.com"
   },
   {
-    "title": "Amazon Clone",
-    "imageSrc": "projects/Hermann.png",
-    "description": "A fully functional e-commerce platform replicating Amazon's design and user interface with modern web technologies.",
-    "skills": ["HTML", "CSS", "JavaScript"],
-    "category": "Web Dev",
-    "demo": "https://hermann1412.github.io/Anazon_copy/",
-    "source": "https://github.com/Hermann1412/Anazon_copy"
-  },
-  {
     "title": "ODAC - Object Detection & Classification",
     "imageSrc": "projects/cctv.png",
     "description": "An AI-powered system for real-time object detection and classification using CCTV cameras. Implemented with machine learning for educational environments.",
@@ -48,12 +39,22 @@
     "report": "https://github.com/Hermann1412/HopeSpring_Project/blob/main/README_FOLDER/REPORT.md"
   },
   {
+    "title": "Abona - E-commerce platform",
+    "imageSrc": ["projects/login.png", "projects/interface.png", "projects/payment.png"],
+    "description": "A full-stack e-commerce platform with user authentication, product management, and secure payment processing using Stripe API.",
+    "skills": ["HTML/CSS/ES Modules", "Node.js + Express.js", "MySQL/MariaDB", "JWT + bryptjs", "stripe API", "Arcjet", "Brevo HTTP API", "Day.js"],
+    "category": "Web Dev",
+    "demo": "https://abona-3ve.pages.dev/login",
+    "source": "https://github.com/Hermann1412/Abona",
+    "report": "https://github.com/Hermann1412/Abona/blob/main/README.md"
+  },
+  {
     "title": "Resume Builder",
     "imageSrc": "projects/resume.png",
     "description": "A full-stack AI-powered resume builder with user authentication, live editing, image upload, and one-click PDF export. Built with React, MongoDB, OpenAI, and deployed on Vercel and Render.",
     "skills": ["ReactJs", "MongoDB", "OpenAI", "Vercel"],
     "category": "Web Dev",
-    "demo": "https://resume-builder-zne9-ay6d67d1y-hermann1412s-projects.vercel.app/",
+    "demo": "https://resume-builder-bdm.pages.dev/",
     "source": "https://github.com/Hermann1412/Resume-Builder/tree/main"
   },
   {

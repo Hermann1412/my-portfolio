@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import styles from "./Hero.module.css";
 import { getImageUrl } from '../../utils';
 import { LanguageContext } from '../../LanguageContext.jsx';
+import projects from '../../data/projects.json';
+import skills from '../../data/skills.json';
 
 export const Hero = () => {
   const { t } = useContext(LanguageContext);
@@ -29,12 +31,12 @@ export const Hero = () => {
 
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <span className={styles.statNumber}>9</span>
+            <span className={styles.statNumber}>{projects.length}</span>
             <span className={styles.statLabel}>{t.hero.statProjects}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
-            <span className={styles.statNumber}>17</span>
+            <span className={styles.statNumber}>{skills.length}</span>
             <span className={styles.statLabel}>{t.hero.statSkills}</span>
           </div>
           <div className={styles.statDivider} />

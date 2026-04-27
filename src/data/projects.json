@@ -19,18 +19,18 @@
   },
   {
     "title": "ODAC - Object Detection & Classification",
-    "imageSrc": "projects/cctv.png",
+    "imageSrc": ["projects/cctv.png", "projects/certificate1.png", "projects/certificate2.png"],
     "description": "An AI-powered system for real-time object detection and classification using CCTV cameras. Implemented with machine learning for educational environments.",
     "skills": ["Python", "HTML", "CSS", "MySQL"],
     "category": "AI / ML",
     "demo": "https://github.com/Hermann1412/-ODAC-project/blob/main/final_pro_result/Screenshot%202025-03-20%20150225.png",
     "source": "https://github.com/Hermann1412/-ODAC-project",
     "report": "https://github.com/Hermann1412/-ODAC-project/blob/main/report/NCEE21_Full-Manuscript_AI_Object-Detection_Tshikala%20et%20al%20(1).pdf",
-    "certificate": "https://github.com/Hermann1412/-ODAC-project/blob/main/report/%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B4%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%9A%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%2021.pdf"
+    "certificate": "https://github.com/Hermann1412/-ODAC-project/blob/main/report/%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B4%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%9A%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%2021.pdf"
   },
   {
     "title": "HopeSpring",
-    "imageSrc": "projects/HopeSpring.png",
+    "imageSrc": ["projects/HopeSpring.png", "projects/HS1.png", "projects/HS2.png", "projects/HS3.png"],
     "description": "A social chat platform where users connect and communicate in real time through a clean, community-driven environment.",
     "skills": ["PHP", "MySQL", "HTML", "CSS"],
     "category": "Web Dev",
@@ -88,7 +88,7 @@
     "imageSrc": "projects/Networking.png",
     "description": "Designed and secured TechSafe Ltd's full network infrastructure — including subnetting, Wireshark traffic analysis, and firewall configuration to defend against cyber threats.",
     "skills": ["Cisco Packet Tracer", "Wireshark", "Nmap"],
-    "category": "Security",
+    "category": ["Security", "Networking"],
     "source": "https://github.com/Hermann1412/Network-design-and-Network-Security",
     "report": "https://github.com/Hermann1412/Network-design-and-Network-Security/blob/main/Network_design_and_Network_security_.pdf"
   },
@@ -97,7 +97,8 @@
     "imageSrc": ["projects/KIOPTRIX.png", "projects/burp.png", "projects/trans2open.png"],
     "description": "Conducted penetration testing and vulnerability assessments on various systems to identify and mitigate potential security risks.",
     "skills": ["Nmap", "Metasploit", "Burp Suite"],
-    "category": "Security",
+    "category": ["Security", "Networking"],
+    "source": "https://github.com/Hermann1412/Pentest/tree/main/KIOPTRIX-L1",
     "report": ""
   }
 ]

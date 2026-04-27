@@ -18,7 +18,10 @@ export const Projects = () => {
 
   return (
     <section className={styles.container} id="projects">
-      <h2 className={styles.title}>{t.projects.title}</h2>
+      <div className={styles.titleRow}>
+        <h2 className={styles.title}>{t.projects.title}</h2>
+        <span className={styles.totalCount}>{projects.length}</span>
+      </div>
 
       <div className={styles.filters} role="tablist" aria-label="Filter projects by category">
         {categories.map((cat) => (

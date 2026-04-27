@@ -19,7 +19,7 @@ export const Hero = () => {
         <p className={styles.description}>{t.hero.description}</p>
 
         <div className={styles.actions}>
-          <a href="mailto:ngendahermann14@gmail.com" className={styles.contactBtn}>
+          <a href="mailto:www.ngendahermann14@gmail.com" className={styles.contactBtn}>
             {t.hero.contactButton}
           </a>
           <a href="#projects" className={styles.projectsBtn}>

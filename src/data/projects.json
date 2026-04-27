@@ -49,6 +49,24 @@
     "report": "https://github.com/Hermann1412/Abona/blob/main/README.md"
   },
   {
+    "title": "AI Chatbot",
+    "imageSrc": "projects/chatbot.png",
+    "description": "A Python/FastAPI microservice that adds intelligent customer-support chat to the Abona e-commerce platform. Designed to run standalone for development and testing, then integrate with the Abona Node.js backend via a single HTTP call.",
+    "skills": ["Python", "FastAPI", "MySQL"],
+    "category": "AI / ML",
+    "source": "https://github.com/Hermann1412/AbonaChatBot",
+    "report": "https://github.com/Hermann1412/AbonaChatBot/blob/main/Abona%20AI%20Bot%20%E2%80%94%20Technical%20Report.pdf"
+  },
+  {
+    "title": "Personal Portfolio",
+    "imageSrc": "projects/portfolio.png",
+    "description": "A personal portfolio website showcasing my projects, skills, and experience with a clean and responsive design.",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "category": "Web Dev",
+    "demo": "https://hermann1412.github.io/Portfolio/",
+    "source": "https://github.com/Hermann1412/Portfolio"
+  },
+  {
     "title": "Resume Builder",
     "imageSrc": "projects/resume.png",
     "description": "A full-stack AI-powered resume builder with user authentication, live editing, image upload, and one-click PDF export. Built with React, MongoDB, OpenAI, and deployed on Vercel and Render.",

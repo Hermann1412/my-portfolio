@@ -58,15 +58,6 @@
     "report": "https://github.com/Hermann1412/AbonaChatBot/blob/main/Abona%20AI%20Bot%20%E2%80%94%20Technical%20Report.pdf"
   },
   {
-    "title": "Personal Portfolio",
-    "imageSrc": "projects/portfolio.png",
-    "description": "A personal portfolio website showcasing my projects, skills, and experience with a clean and responsive design.",
-    "skills": ["HTML", "CSS", "JavaScript"],
-    "category": "Web Dev",
-    "demo": "https://hermann1412.github.io/Portfolio/",
-    "source": "https://github.com/Hermann1412/Portfolio"
-  },
-  {
     "title": "Resume Builder",
     "imageSrc": "projects/resume.png",
     "description": "A full-stack AI-powered resume builder with user authentication, live editing, image upload, and one-click PDF export. Built with React, MongoDB, OpenAI, and deployed on Vercel and Render.",
@@ -100,5 +91,13 @@
     "category": "Security",
     "source": "https://github.com/Hermann1412/Network-design-and-Network-Security",
     "report": "https://github.com/Hermann1412/Network-design-and-Network-Security/blob/main/Network_design_and_Network_security_.pdf"
+  },
+  {
+    "title": "Pentesting & Vulnerability Assessment",
+    "imageSrc": ["projects/KIOPTRIX.png", "projects/burp.png", "projects/trans2open.png"],
+    "description": "Conducted penetration testing and vulnerability assessments on various systems to identify and mitigate potential security risks.",
+    "skills": ["Nmap", "Metasploit", "Burp Suite"],
+    "category": "Security",
+    "report": ""
   }
 ]

@@ -58,7 +58,7 @@ const translations = {
     background: {
       title: "Background & Education",
       description:
-        "Pursuing Computer Engineering at Assumption University in Thailand. Strong foundation in modern tech stack, systems design, and collaborative problem-solving.",
+        "I Have Pursuied Computer Engineering at Assumption University in Thailand. Build Strong foundation in modern tech stack, systems design, and collaborative problem-solving.",
     },
     experience: {
       title: "Experience",

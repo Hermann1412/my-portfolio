@@ -119,6 +119,25 @@
   box-shadow: 0 8px 22px rgba(31, 41, 51, 0.12);
 }
 
+.linkedinBtn {
+  text-decoration: none;
+  background: #0077b5;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 28px;
+  border: 1px solid #005f8e;
+  box-shadow: 0 4px 14px rgba(0, 119, 181, 0.28);
+  transition: all 0.28s ease;
+}
+
+.linkedinBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 119, 181, 0.42);
+  background: #005f8e;
+}
+
 .stats {
   display: flex;
   align-items: center;
@@ -207,6 +226,42 @@
   /* pull the frame up to focus on the face, cropping the empty ceiling */
   object-position: center 18%;
   border-radius: 25px;
+}
+
+/* Certified badge above the image */
+.certifiedBadge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(22, 163, 74, 0.12);
+  border: 1px solid rgba(22, 163, 74, 0.45);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.18);
+}
+
+.certifiedIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 /* Floating "role" badge on the image */

@@ -27,6 +27,14 @@ export const Hero = () => {
           <a href="#projects" className={styles.projectsBtn}>
             {t.hero.projectsButton}
           </a>
+          <a
+            href="https://www.linkedin.com/in/hermann-ngenda-3310582b7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.linkedinBtn}
+          >
+            LinkedIn
+          </a>
         </div>
 
         <div className={styles.stats}>
@@ -59,6 +67,12 @@ export const Hero = () => {
             alt="Hermann — Full-stack developer"
             className={styles.heroImg}
           />
+        </div>
+
+        {/* Certified badge */}
+        <div className={styles.certifiedBadge}>
+          <span className={styles.certifiedIcon}>✓</span>
+          Certified
         </div>
 
         {/* Floating role badge */}

@@ -76,6 +76,16 @@
     "report": "https://github.com/Hermann1412/sql-data-warehouse-project/blob/main/README.md"
   },
   {
+    "title": "Exploratory Data Analysis (EDA) on Data Warehouse",
+    "imageSrc": ["projects/EDA1.png", "projects/EDA2.png", "projects/EDA3.png", "projects/EDA4.png", "projects/EDA5.png"],
+    "description": "an Exploratory Data Analysis (EDA) carried out on the gold layer of the DataWarehouse SQL Server database. The EDA process involved analyzing the data to uncover patterns, trends, and insights that can inform decision-making and improve the overall understanding of the library's operations and user behavior.",
+    "skills": ["MySQL", "T-SQL"],
+    "category": "Database",
+    "source": "https://github.com/Hermann1412/Data-analytics/tree/main/script",
+    "report": "https://github.com/Hermann1412/Data-analytics/blob/main/EDA_Report_DataWarehouse.pdf"
+  },
+
+  {
     "title": "Hotel Management Network",
     "imageSrc": "projects/Hotel.png",
     "description": "A complete network topology designed for a hotel environment, ensuring efficient communication and data exchange between all departments using Cisco technologies.",

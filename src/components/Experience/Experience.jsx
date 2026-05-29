@@ -62,6 +62,24 @@ export const Experience = () => {
             <span className={styles.certName}>Academic Certification</span>
           </div>
         </div>
+
+        <a
+          href="/Graduation.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.certCard}
+        >
+          <img
+            src={getImageUrl("projects/graduation.png")}
+            alt="Graduation Status Certification"
+            className={styles.certImg}
+          />
+          <div className={styles.certInfo}>
+            <span className={styles.certIssuer}>Assumption University</span>
+            <span className={styles.certName}>Graduation Status Certification</span>
+            <span className={styles.certVerify}>View ↗</span>
+          </div>
+        </a>
       </div>
     </section>
   );

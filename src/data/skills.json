@@ -28,6 +28,10 @@
     "imageSrc": "skills/mysql.png"
   },
   {
+    "title": "Redis",
+    "imageSrc": "skills/redis.png"
+  },
+  {
     "title": "Python",
     "imageSrc": "skills/python.png"
   },
@@ -38,10 +42,6 @@
   {
     "title": "Kotlin",
     "imageSrc": "skills/Kotlin.png"
-  },
-  {
-    "title": "Unity",
-    "imageSrc": "skills/unity.png"
   },
   {
     "title": "Cisco Packet Tracer",
@@ -66,5 +66,21 @@
   {
     "title": "Kali Linux",
     "imageSrc": "skills/kali.png"
+  },
+  {
+    "title": "Docker",
+    "imageSrc": "skills/docker.png"
+  },
+  {
+    "title": "Kubernetes",
+    "imageSrc": "skills/Kubernetes.png"
+  },
+  {
+    "title": "Azure",
+    "imageSrc": "skills/azuree.png"
+  },
+  {
+    "title": "aws",
+    "imageSrc": "skills/aws.png"
   }
 ]

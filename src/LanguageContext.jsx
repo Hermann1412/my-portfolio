@@ -17,7 +17,7 @@ const translations = {
     hero: {
       title: "Hi, I'm Hermann",
       description:
-        "Full-stack developer and cybersecurity enthusiast focused on clean interfaces, reliable back-end systems, and practical solutions using modern web technologies.",
+        "Recent Computer Engineering graduate passionate about full-stack development, DevOps, database engineering, and data analytics — building reliable systems from front-end to infrastructure.",
       contactButton: "Contact Me",
       projectsButton: "View Projects",
       statusBadge: "Open to opportunities",
@@ -39,31 +39,31 @@ const translations = {
             "Building scalable, performant systems and APIs that power seamless user experiences at scale.",
         },
         {
-          title: "UI Designer",
+          title: "DevOps",
           description:
-            "Designing thoughtful, accessible interfaces and systems that elevate product experiences.",
+            "Containerizing applications with Docker, orchestrating workloads with Kubernetes, and building reliable CI/CD pipelines. Focused on infrastructure as code, automation, and keeping systems running smoothly in production.",
         },
         {
-          title: "Game Developer",
+          title: "Database Engineer",
           description:
-            "Exploring interactive experiences with Unity. Creating engaging gameplay and immersive worlds.",
+            "Designing and managing relational and non-relational databases — MySQL, PostgreSQL, MongoDB. Experienced in schema design, query optimization, ETL pipelines, and data warehousing for scalable storage solutions.",
         },
         {
-          title: "Cybersecurity & Networking",
+          title: "Data Analyst",
           description:
-            "Hands-on experience with Kali Linux, Wireshark, Burp Suite, Nmap, and Cisco Packet Tracer for network design, security assessments, and threat analysis.",
+            "Turning raw data into actionable insights through structured querying, data modeling, and visualization. Comfortable working across the full data pipeline from ingestion and transformation to reporting.",
         },
       ],
     },
     background: {
       title: "Background & Education",
       description:
-        "I Have Pursuied Computer Engineering at Assumption University in Thailand. Build Strong foundation in modern tech stack, systems design, and collaborative problem-solving.",
+        "Recently graduated in Computer Engineering from Assumption University in Thailand. Built a strong foundation in full-stack development, DevOps practices, database engineering, and data analytics through academic projects and hands-on coursework.",
     },
     experience: {
       title: "Experience",
       message:
-        "While I am at the beginning of my professional career, I have built a strong foundation through my studies and hands-on projects. I am eager to apply my knowledge in real-world environments and continue developing the skills required in my field. The projects I have completed reflect my dedication, technical ability, and readiness to add value to your organization.",
+        "I recently graduated and am at the start of my professional journey. Through my studies and personal projects I have developed practical skills in full-stack development, DevOps tooling, database design, and data analysis. I am actively looking for my first role where I can apply this knowledge, grow fast, and contribute meaningfully from day one.",
     },
     projects: {
       title: "Projects",
@@ -122,7 +122,7 @@ const translations = {
     },
     contact: {
       title: "Let's Connect",
-      description: "Open to collaborations, internships, and interesting opportunities. Feel free to reach out.",
+      description: "Recent graduate open to entry-level roles, internships, and collaborations in full-stack development, DevOps, database engineering, or data analytics. Feel free to reach out.",
       copyright: "All rights reserved.",
     },
   },
@@ -143,7 +143,7 @@ const translations = {
     hero: {
       title: "Bonjour, je suis Hermann",
       description:
-        "Developpeur full-stack et passionné de cybersécurité, axé sur des interfaces soignées, des systèmes back-end fiables et des solutions pratiques.",
+        "Jeune diplômé en ingénierie informatique, passionné par le développement full-stack, le DevOps, l'ingénierie des bases de données et l'analyse de données — du front-end à l'infrastructure.",
       contactButton: "Me contacter",
       projectsButton: "Voir les projets",
       statusBadge: "Ouvert aux opportunités",
@@ -165,31 +165,31 @@ const translations = {
             "Je construis des systèmes évolutifs et performants ainsi que des API qui assurent des expériences fluides.",
         },
         {
-          title: "Designer UI",
+          title: "DevOps",
           description:
-            "Je conçois des interfaces accessibles et cohérentes qui valorisent l'expérience produit.",
+            "Conteneurisation avec Docker, orchestration avec Kubernetes, et mise en place de pipelines CI/CD fiables. Axé sur l'infrastructure as code, l'automatisation et la stabilité des systèmes en production.",
         },
         {
-          title: "Developpeur de jeux",
+          title: "Ingénieur Base de Données",
           description:
-            "J'explore des expériences interactives avec Unity en créant des gameplays engageants et des univers immersifs.",
+            "Conception et gestion de bases de données relationnelles et non relationnelles — MySQL, PostgreSQL, MongoDB. Expérience en modélisation de schémas, optimisation de requêtes, pipelines ETL et entrepôts de données.",
         },
         {
-          title: "Cybersécurité & Réseaux",
+          title: "Data Analyst",
           description:
-            "Expérience pratique avec Kali Linux, Wireshark, Burp Suite, Nmap et Cisco Packet Tracer pour la conception réseau, les audits de sécurité et l'analyse des menaces.",
+            "Transformer les données brutes en insights exploitables grâce à des requêtes structurées, la modélisation et la visualisation. À l'aise sur toute la chaîne de traitement, de l'ingestion à la restitution.",
         },
       ],
     },
     background: {
       title: "Parcours & Formation",
       description:
-        "Je poursuis des études en ingénierie informatique à l'Assumption University en Thaïlande, avec une base solide en technologies modernes, architecture des systèmes et travail collaboratif.",
+        "Fraîchement diplômé en ingénierie informatique de l'Assumption University en Thaïlande. J'ai acquis de solides bases en développement full-stack, DevOps, ingénierie des bases de données et analyse de données à travers des projets académiques et des travaux pratiques.",
     },
     experience: {
       title: "Experience",
       message:
-        "Bien que je sois au début de ma carrière professionnelle, j'ai construit une base solide grâce à mes études et à des projets concrets. Je suis motivé à appliquer mes connaissances dans des contextes réels et à continuer de développer les compétences nécessaires à mon domaine. Les projets que j'ai réalisés reflètent ma rigueur, mes capacités techniques et ma volonté d'apporter de la valeur à votre organisation.",
+        "Je viens de terminer mes études et je débute mon parcours professionnel. À travers mes projets académiques et personnels, j'ai développé des compétences concrètes en développement full-stack, DevOps, conception de bases de données et analyse de données. Je recherche activement mon premier poste pour appliquer ces acquis, progresser rapidement et apporter une contribution réelle dès le premier jour.",
     },
     projects: {
       title: "Projets",
@@ -249,7 +249,7 @@ const translations = {
     contact: {
       title: "Restons en contact",
       description:
-        "Ouvert aux collaborations, aux stages et aux opportunités intéressantes. N'hésitez pas à me contacter.",
+        "Jeune diplômé ouvert aux postes juniors, aux stages et aux collaborations en développement full-stack, DevOps, ingénierie des bases de données ou analyse de données. N'hésitez pas à me contacter.",
       copyright: "Tous droits réservés.",
     },
   },

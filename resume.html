@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermann N'Zi Ngenda — Resume</title>
+  <style>
+    :root {
+      --accent:  #2563eb;
+      --accent2: #1e40af;
+      --light:   #eff6ff;
+      --border:  #bfdbfe;
+      --text:    #1e293b;
+      --muted:   #475569;
+      --tag-bg:  #dbeafe;
+      --tag-text:#1e40af;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: var(--text);
+      background: #fff;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0;
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ══ TOP BANNER ══ */
+    .banner {
+      background: var(--accent);
+      color: #fff;
+      padding: 28px 36px 22px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .banner img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.6);
+      flex-shrink: 0;
+    }
+    .banner-text { flex: 1; }
+    .banner h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.3px; }
+    .banner .subtitle {
+      font-size: 11px;
+      opacity: 0.88;
+      margin: 4px 0 10px;
+      letter-spacing: 0.2px;
+    }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 10.5px; }
+    .contact-row a { color: #fff; opacity: 0.9; }
+    .contact-row a:hover { opacity: 1; text-decoration: underline; }
+    .contact-row span { opacity: 0.9; }
+
+    /* ══ BODY ══ */
+    .body { padding: 20px 36px 32px; }
+
+    /* ══ SECTION TITLE ══ */
+    h2 {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--accent2);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 3px;
+      margin: 16px 0 8px;
+    }
+
+    /* ══ ENTRY ══ */
+    .entry { margin-bottom: 9px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .entry-header h3 { font-size: 11px; font-weight: 700; color: var(--text); }
+    .entry-header .links { font-size: 10px; white-space: nowrap; flex-shrink: 0; }
+    .entry-meta { font-size: 10px; color: var(--muted); margin: 1px 0 3px; }
+    ul { padding-left: 15px; }
+    li { margin-bottom: 2px; color: var(--text); }
+
+    /* ══ TWO-COLUMN ══ */
+    .two-col { display: grid; grid-template-columns: 1.7fr 1fr; gap: 0 28px; }
+
+    /* ══ SKILLS ══ */
+    .skill-group { margin-bottom: 9px; }
+    .skill-group h3 { font-size: 10.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .skill-row { display: flex; flex-wrap: wrap; gap: 3px 5px; }
+    .skill-tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1px 7px;
+      font-size: 9.5px;
+      font-weight: 600;
+    }
+
+    /* ══ CERT CARDS ══ */
+    .certs-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cert-entry {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 60%, #3b82f6 100%);
+      border-radius: 6px;
+      padding: 7px 10px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .cert-icon {
+      width: 26px;
+      height: 26px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .cert-body { flex: 1; min-width: 0; }
+    .cert-entry h3 {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1px;
+    }
+    .cert-entry .cert-meta {
+      font-size: 9.5px;
+      color: rgba(255,255,255,0.78);
+    }
+    .cert-entry .cert-meta a {
+      color: #bfdbfe;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .cert-verify {
+      font-size: 9px;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 3px;
+      padding: 2px 7px;
+      white-space: nowrap;
+      text-decoration: none !important;
+      flex-shrink: 0;
+    }
+    .cert-verify:hover { background: rgba(255,255,255,0.3); }
+
+    /* ══ SUMMARY BOX ══ */
+    .summary-box {
+      background: var(--light);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 11px;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    /* ══ PHILOSOPHY BLOCK ══ */
+    .philosophy {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 6px;
+      padding: 10px 14px 10px 16px;
+      margin-bottom: 2px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .philosophy-bar {
+      width: 3px;
+      min-height: 100%;
+      background: linear-gradient(180deg, #60a5fa, #a78bfa);
+      border-radius: 2px;
+      flex-shrink: 0;
+      align-self: stretch;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .philosophy p {
+      font-size: 10.5px;
+      color: #e2e8f0;
+      font-style: italic;
+      line-height: 1.65;
+    }
+    .philosophy strong {
+      color: #93c5fd;
+      font-style: normal;
+    }
+
+    /* ══ OTHER WORK ══ */
+    .other-work { display: flex; flex-direction: column; gap: 4px; }
+    .other-item {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 0 10px;
+      align-items: baseline;
+      border-left: 2px solid var(--border);
+      padding-left: 8px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    .other-title { font-size: 10.5px; font-weight: 700; color: var(--text); }
+    .other-tech { font-size: 9.5px; color: var(--muted); }
+    .other-links { font-size: 9.5px; white-space: nowrap; }
+
+    /* ══ PRINT ══ */
+    @media print {
+      body { font-size: 10.5px; }
+      .body { padding: 14px 24px 20px; }
+      .banner { padding: 20px 24px 16px; }
+      @page { size: A4; margin: 0.8cm; }
+      .cert-entry {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .summary-box {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .skill-tag {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .banner {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .philosophy {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .philosophy-bar {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ BANNER ══ -->
+  <div class="banner">
+    <img src="profile.png" alt="Hermann N'Zi Ngenda" />
+    <div class="banner-text">
+      <h1>Hermann N'Zi Ngenda</h1>
+      <p class="subtitle">Full-Stack Developer &nbsp;·&nbsp; DevOps &nbsp;·&nbsp; Database Engineer &nbsp;·&nbsp; Data Analyst</p>
+      <div class="contact-row">
+        <a href="mailto:ngendahermann14@gmail.com">ngendahermann14@gmail.com</a>
+        <a href="mailto:u6411076@au.edu">u6411076@au.edu</a>
+        <a href="tel:+66951975823">+66 95 197 5823</a>
+        <a href="https://www.linkedin.com/in/hermann-ngenda-3310582b7/">LinkedIn ↗</a>
+        <a href="https://github.com/Hermann1412">github.com/Hermann1412</a>
+        <a href="https://hermann1412.github.io/my-portfolio">Portfolio ↗</a>
+        <span>Bangkok, Thailand</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ BODY ══ -->
+  <div class="body">
+
+    <!-- SUMMARY -->
+    <h2>Summary</h2>
+    <div class="summary-box">
+      Recent Computer Engineering graduate from Assumption University of Thailand. Skilled in full-stack web development
+      (React, Node.js, PHP, Python), DevOps tooling (Docker, Kubernetes, CI/CD), relational and non-relational
+      database engineering (MySQL, MongoDB, Redis, T-SQL), and exploratory and advanced data analytics.
+      Comfortable across the entire stack — from responsive front-ends to containerised microservices and layered
+      data warehouses. Actively seeking a first professional role in software engineering, DevOps, or data engineering.
+    </div>
+
+    <div class="philosophy">
+      <div class="philosophy-bar"></div>
+      <p>
+        <strong>A belief I carry into every project —</strong>
+        I've come to think that hardware, software, and code are the <em>means</em>, not the measure.
+        What I try to bring to a problem is the patience to first understand its structure —
+        why it exists, where it breaks, and what a solution actually needs to look like.
+        I'm still learning, but I genuinely believe that <strong>the ability to reason through a problem
+        and adapt your approach</strong> matters more than the list of tools on your CV.
+        I hope the projects below reflect at least the beginning of that.
+      </p>
+    </div>
+
+    <div class="two-col">
+
+      <!-- ── LEFT ── -->
+      <div>
+
+        <!-- EDUCATION -->
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Bachelor of Engineering — Computer Engineering</h3>
+            <span class="links">Apr 2026</span>
+          </div>
+          <div class="entry-meta">Assumption University of Thailand</div>
+          <ul>
+            <li>140 credits completed; English medium of instruction.</li>
+            <li>Final-year capstone: ODAC — real-time AI object-detection system, published at NCEE21 national engineering conference.</li>
+          </ul>
+        </div>
+
+        <!-- PROJECTS -->
+        <h2>Projects</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Abona — Full-Stack E-Commerce SaaS</h3>
+            <span class="links"><a href="https://abona-3ve.pages.dev/login">Live ↗</a> &nbsp;|&nbsp; <a href="https://github.com/Hermann1412/Abona">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">Node.js · Express · MySQL/MariaDB · Stripe · FastAPI · Python · JWT · bcryptjs · Arcjet · Brevo</div>
+          <ul>
+            <li>Hardened the platform against bot attacks, brute force, and session hijacking by engineering a 3-layer auth system (Arcjet + JWT + bcryptjs) — zero security incidents at launch.</li>
+            <li>Eliminated checkout uncertainty by wiring Stripe webhooks for real-time order confirmation, removing the leading cause of abandoned purchases.</li>
+            <li>Decoupled customer support into a standalone FastAPI microservice — independently deployable and scalable without touching the core Node.js API.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>153Shelf — Online Library Platform</h3>
+            <span class="links"><a href="https://153shelf.vercel.app/">Live ↗</a> &nbsp;|&nbsp; <a href="https://github.com/Hermann1412/153shelf">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">MongoDB · Express · React (TypeScript) · Node.js · Vercel</div>
+          <ul>
+            <li>Shipped a live reading platform where any registered user accesses books at zero cost — role-gated content management for admins, frictionless access for readers, deployed and publicly reachable.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Data Warehouse + EDA + Advanced Analytics</h3>
+            <span class="links"><a href="https://github.com/Hermann1412/sql-data-warehouse-project">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">MySQL · T-SQL · SQL Server · ETL</div>
+          <ul>
+            <li>Reduced BI query complexity by architecting a 3-layer warehouse (bronze → silver → gold), giving each stage a single responsibility — ingestion, transformation, and analytics-ready output kept fully separate.</li>
+            <li>Produced KPI dashboards and cohort analysis on the gold layer, converting raw library transaction records into actionable insights on user retention, borrowing trends, and inventory utilisation.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>ODAC — AI Object Detection &amp; Classification</h3>
+            <span class="links"><a href="https://github.com/Hermann1412/-ODAC-project">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">Python · OpenCV · TensorFlow · Keras · MySQL</div>
+          <ul>
+            <li>Trained and deployed a real-time CNN object classifier on live CCTV footage (TensorFlow / Keras / OpenCV), filling a safety monitoring gap in educational environments — research accepted and published at the NCEE21 national engineering conference.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Docker &amp; Kubernetes Reference Notebook</h3>
+            <span class="links"><a href="https://github.com/Hermann1412/docker-reference">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">Docker · Kubernetes · kubectl</div>
+          <ul>
+            <li>Produced a structured, public DevOps reference covering container lifecycle, Kubernetes orchestration, and real kubectl patterns — condensing scattered documentation into a single actionable guide.</li>
+          </ul>
+        </div>
+
+        <h2>Other Work</h2>
+        <div class="other-work">
+          <div class="other-item">
+            <span class="other-title">Resume Builder</span>
+            <span class="other-tech">React · MongoDB · OpenAI · Vercel</span>
+            <span class="other-links"><a href="https://resume-builder-bdm.pages.dev/">Live ↗</a> &nbsp;|&nbsp; <a href="https://github.com/Hermann1412/Resume-Builder">GitHub ↗</a></span>
+          </div>
+          <div class="other-item">
+            <span class="other-title">HopeSpring — Social Chat Platform</span>
+            <span class="other-tech">PHP · MySQL · HTML · CSS</span>
+            <span class="other-links"><a href="https://hopespring.infinityfreeapp.com/">Live ↗</a> &nbsp;|&nbsp; <a href="https://github.com/Hermann1412/HopeSpring_Project">GitHub ↗</a></span>
+          </div>
+          <div class="other-item">
+            <span class="other-title">Network Design &amp; Security — TechSafe Ltd</span>
+            <span class="other-tech">Cisco Packet Tracer · Wireshark · Nmap</span>
+            <span class="other-links"><a href="https://github.com/Hermann1412/Network-design-and-Network-Security">Report ↗</a></span>
+          </div>
+          <div class="other-item">
+            <span class="other-title">Pentesting &amp; Vulnerability Assessment</span>
+            <span class="other-tech">Kali Linux · Metasploit · Burp Suite</span>
+            <span class="other-links"><a href="https://github.com/Hermann1412/Pentest">Report ↗</a></span>
+          </div>
+          <div class="other-item">
+            <span class="other-title">Hotel Management Network</span>
+            <span class="other-tech">Cisco Packet Tracer</span>
+            <span class="other-links"><a href="https://github.com/Hermann1412/Hotel-network-Management-System">GitHub ↗</a></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── RIGHT ── -->
+      <div>
+
+        <!-- SKILLS -->
+        <h2>Technical Skills</h2>
+
+        <div class="skill-group">
+          <h3>Full-Stack</h3>
+          <div class="skill-row">
+            <span class="skill-tag">HTML / CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Kotlin</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <div class="skill-row">
+            <span class="skill-tag">MySQL / MariaDB</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">T-SQL</span>
+            <span class="skill-tag">SQL Server</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>DevOps &amp; Cloud</h3>
+          <div class="skill-row">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Cloudflare Pages</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Data &amp; AI</h3>
+          <div class="skill-row">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">ETL Pipelines</span>
+            <span class="skill-tag">Data Warehousing</span>
+            <span class="skill-tag">EDA</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Security &amp; Networking</h3>
+          <div class="skill-row">
+            <span class="skill-tag">Kali Linux</span>
+            <span class="skill-tag">Wireshark</span>
+            <span class="skill-tag">Nmap</span>
+            <span class="skill-tag">Burp Suite</span>
+            <span class="skill-tag">Metasploit</span>
+            <span class="skill-tag">Cisco Packet Tracer</span>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <h2>Certifications</h2>
+
+        <div class="certs-grid">
+
+          <div class="cert-entry">
+            <div class="cert-icon">🎓</div>
+            <div class="cert-body">
+              <h3>Graduation Status Certification</h3>
+              <div class="cert-meta">Assumption University of Thailand &nbsp;·&nbsp; May 2026</div>
+            </div>
+            <a class="cert-verify" href="Graduation.pdf" target="_blank">View PDF ↗</a>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-icon">🏅</div>
+            <div class="cert-body">
+              <h3>IBM — Networking &amp; Security</h3>
+              <div class="cert-meta">Coursera &nbsp;·&nbsp; Verified credential</div>
+            </div>
+            <a class="cert-verify" href="https://coursera.org/verify/9PL8YON81ZSP" target="_blank">Verify ↗</a>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-icon">📜</div>
+            <div class="cert-body">
+              <h3>Council of Deans of Thailand</h3>
+              <div class="cert-meta">Academic Achievement Certification</div>
+            </div>
+            <a class="cert-verify" href="Aicertification.pdf" target="_blank">View PDF ↗</a>
+          </div>
+
+        </div>
+
+        <!-- LANGUAGES -->
+        <h2>Languages</h2>
+        <div class="entry">
+          <div style="margin-bottom:3px"><strong>French</strong> &nbsp;—&nbsp; Native</div>
+          <div><strong>English</strong> &nbsp;—&nbsp; Professional (university medium of instruction)</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

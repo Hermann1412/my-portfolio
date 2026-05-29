@@ -3,7 +3,7 @@
 .container {
   color: var(--color-text);
   margin-top: 100px;
-  background: linear-gradient(135deg, rgba(252, 247, 240, 0.95) 0%, rgba(248, 239, 231, 0.92) 100%);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95) 0%, rgba(224, 236, 255, 0.92) 100%);
   border-top: 1px solid var(--surface-border);
   width: 100%;
   padding: 72px var(--section-inline-padding) 48px;

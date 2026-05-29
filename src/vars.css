@@ -1,32 +1,32 @@
 :root {
-  /*Color*/
-  --color-text: #1f2933;
-  --color-text-secondary: #445565;       /* was #5a6573 — darkened for readability */
-  --color-primary: #bd5d2e;
-  --color-primary-dark: #93401a;
-  --color-secondary: #f7efe5;
-  --color-dark: #13202b;
-  --color-bg: #f6f1e8;
-  --color-accent: #0f766e;
+  /* Color */
+  --color-text: #0f172a;
+  --color-text-secondary: #334155;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #eff6ff;
+  --color-dark: #020817;
+  --color-bg: #f0f6ff;
+  --color-accent: #0ea5e9;
   --color-danger: #ef4444;
-  --color-on-primary: #fffaf5;
+  --color-on-primary: #ffffff;
 
-  /* Gradient text — separate from button/border colours */
-  --heading-from: #8b3a10;             /* dark orange, ~9:1 on cream  */
-  --heading-to:   #0a5752;             /* dark teal,   ~8:1 on cream  */
+  /* Gradient text */
+  --heading-from: #1e3a8a;
+  --heading-to:   #0284c7;
 
-  --surface-1: rgba(255, 250, 244, 0.72);
-  --surface-2: rgba(255, 255, 255, 0.9);
-  --surface-border: rgba(143, 111, 83, 0.28);
-  --shadow-soft: 0 14px 36px rgba(31, 41, 51, 0.1);
+  --surface-1: rgba(224, 236, 255, 0.75);
+  --surface-2: rgba(255, 255, 255, 0.95);
+  --surface-border: rgba(37, 99, 235, 0.2);
+  --shadow-soft: 0 14px 36px rgba(15, 23, 42, 0.1);
   --section-max-width: 1180px;
   --section-inline-padding: clamp(16px, 5vw, 64px);
 
-  /*font*/
+  /* Font */
   --font-roboto: "Public Sans";
   --font-outfit: "Sora";
 
-  /*spacing*/
+  /* Spacing */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -35,20 +35,19 @@
   --spacing-2xl: 48px;
 }
 
-/* Dark Mode Theme */
+/* Dark Mode */
 [data-theme="dark"] {
-  --color-text: #e8e4e0;
-  --color-text-secondary: #c8c4c0;       /* was #b8b4b0 — lightened for dark bg */
-  --color-bg: #1a1410;
-  --color-secondary: #2a241a;
-  --color-dark: #0f0c0a;
+  --color-text: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-bg: #020817;
+  --color-secondary: #0f172a;
+  --color-dark: #010410;
 
-  /* Gradient text flips to bright colours for dark bg */
-  --heading-from: #e8793e;             /* bright orange, ~7:1 on dark bg */
-  --heading-to:   #20c4b0;             /* bright teal,   ~9:1 on dark bg */
+  --heading-from: #60a5fa;
+  --heading-to:   #38bdf8;
 
-  --surface-1: rgba(30, 24, 18, 0.72);
-  --surface-2: rgba(40, 34, 28, 0.9);
-  --surface-border: rgba(189, 93, 46, 0.28);
-  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.3);
+  --surface-1: rgba(15, 23, 42, 0.8);
+  --surface-2: rgba(15, 23, 42, 0.95);
+  --surface-border: rgba(59, 130, 246, 0.25);
+  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.4);
 }

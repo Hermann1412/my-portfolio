@@ -8,7 +8,7 @@
   justify-content: space-between;
   padding: 20px var(--section-inline-padding);
   z-index: 20;
-  background: linear-gradient(180deg, rgba(252, 247, 240, 0.9) 0%, rgba(252, 247, 240, 0.65) 100%);
+  background: linear-gradient(180deg, rgba(240, 246, 255, 0.92) 0%, rgba(240, 246, 255, 0.65) 100%);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--surface-border);
 }
@@ -54,21 +54,21 @@
   font-weight: 600;
   color: var(--color-on-primary);
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  border: 1px solid rgba(147, 64, 26, 0.45);
+  border: 1px solid rgba(37, 99, 235, 0.45);
   border-radius: 999px;
   padding: 8px 14px;
-  box-shadow: 0 8px 22px rgba(147, 64, 26, 0.22);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.22);
 }
 
 .copyBtn:hover {
-  border-color: rgba(147, 64, 26, 0.7);
+  border-color: rgba(37, 99, 235, 0.7);
   transform: translateY(-1px);
 }
 
 .copied {
-  background: linear-gradient(135deg, #168075, #0f5f57);
-  border-color: rgba(15, 118, 110, 0.85);
-  color: #ebfff8;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  border-color: rgba(14, 165, 233, 0.85);
+  color: #fff;
 }
 
 .themeBtn {
@@ -85,7 +85,7 @@
 
 .themeBtn:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 6px 16px rgba(147, 64, 26, 0.15);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
   transform: translateY(-1px);
 }
 
@@ -104,7 +104,7 @@
 
 .langBtn:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.15);
+  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.15);
   transform: translateY(-1px);
 }
 
@@ -153,7 +153,7 @@
     align-items: stretch;
     gap: 0;
     border-radius: 12px;
-    background: rgba(252, 247, 240, 0.97);
+    background: rgba(240, 246, 255, 0.97);
     backdrop-filter: blur(10px);
     border: 1px solid var(--surface-border);
     padding: 12px 0;
@@ -163,7 +163,7 @@
   }
 
   .menuItems li {
-    border-bottom: 1px solid rgba(143, 111, 83, 0.2);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.15);
   }
 
   .menuItems li:last-child {

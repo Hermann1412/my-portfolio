@@ -17,7 +17,7 @@ const translations = {
     hero: {
       title: "Hi, I'm Hermann",
       description:
-        "Recent Computer Engineering graduate passionate about full-stack development, DevOps, database engineering, and data analytics — building reliable systems from front-end to infrastructure.",
+        "Recent Computer Engineering graduate looking to join a SaaS company, agency, or large engineering team — building data pipelines, automating infrastructure, and solving performance problems from front-end to production.",
       contactButton: "Contact Me",
       projectsButton: "View Projects",
       statusBadge: "Open to opportunities",
@@ -58,12 +58,12 @@ const translations = {
     background: {
       title: "Background & Education",
       description:
-        "Recently graduated in Computer Engineering from Assumption University in Thailand. Built a strong foundation in full-stack development, DevOps practices, database engineering, and data analytics through academic projects and hands-on coursework.",
+        "Recently graduated in Computer Engineering from Assumption University in Thailand. Relevant coursework includes Software Engineering, Database Management Systems, Data Structures & Algorithms, Data Communications & Networking, Artificial Intelligence, and Network Security. Built a strong hands-on foundation through academic projects and personal builds.",
     },
     experience: {
       title: "Experience",
       message:
-        "I recently graduated and am at the start of my professional journey. Through my studies and personal projects I have developed practical skills in full-stack development, DevOps tooling, database design, and data analysis. I am actively looking for my first role where I can apply this knowledge, grow fast, and contribute meaningfully from day one.",
+        "I recently graduated and am open to internships and full-time roles at SaaS companies, agencies, or large engineering teams. Through my studies and personal projects I have developed practical skills in full-stack development, DevOps tooling, database design, and data analysis. I am especially drawn to environments where the work involves building data pipelines, automating infrastructure, or solving performance problems — places where there is always something to optimise and the impact of getting it right is visible.",
     },
     projects: {
       title: "Projects",
@@ -122,7 +122,7 @@ const translations = {
     },
     contact: {
       title: "Let's Connect",
-      description: "Recent graduate open to entry-level roles, internships, and collaborations in full-stack development, DevOps, database engineering, or data analytics. Feel free to reach out.",
+      description: "Open to internships and full-time roles at SaaS companies, agencies, or large engineering teams. If the work involves data pipelines, infrastructure automation, or performance — let's talk.",
       copyright: "All rights reserved.",
     },
   },
@@ -143,7 +143,7 @@ const translations = {
     hero: {
       title: "Bonjour, je suis Hermann",
       description:
-        "Jeune diplômé en ingénierie informatique, passionné par le développement full-stack, le DevOps, l'ingénierie des bases de données et l'analyse de données — du front-end à l'infrastructure.",
+        "Jeune diplômé en ingénierie informatique, souhaitant rejoindre une entreprise SaaS, une agence ou une grande équipe d'ingénierie — pour construire des pipelines de données, automatiser l'infrastructure et résoudre des problèmes de performance, du front-end à la production.",
       contactButton: "Me contacter",
       projectsButton: "Voir les projets",
       statusBadge: "Ouvert aux opportunités",
@@ -184,12 +184,12 @@ const translations = {
     background: {
       title: "Parcours & Formation",
       description:
-        "Fraîchement diplômé en ingénierie informatique de l'Assumption University en Thaïlande. J'ai acquis de solides bases en développement full-stack, DevOps, ingénierie des bases de données et analyse de données à travers des projets académiques et des travaux pratiques.",
+        "Fraîchement diplômé en ingénierie informatique de l'Assumption University en Thaïlande. Cours suivis : Génie logiciel, Systèmes de gestion de bases de données, Structures de données & Algorithmes, Réseaux de données, Intelligence artificielle et Sécurité réseau. Solide expérience pratique acquise à travers des projets académiques et personnels.",
     },
     experience: {
       title: "Experience",
       message:
-        "Je viens de terminer mes études et je débute mon parcours professionnel. À travers mes projets académiques et personnels, j'ai développé des compétences concrètes en développement full-stack, DevOps, conception de bases de données et analyse de données. Je recherche activement mon premier poste pour appliquer ces acquis, progresser rapidement et apporter une contribution réelle dès le premier jour.",
+        "Je viens de terminer mes études et je suis ouvert aux stages et aux postes à temps plein dans des entreprises SaaS, des agences ou de grandes équipes d'ingénierie. À travers mes projets académiques et personnels, j'ai développé des compétences concrètes en développement full-stack, DevOps, conception de bases de données et analyse de données. Je suis particulièrement attiré par les environnements où le travail implique la construction de pipelines de données, l'automatisation d'infrastructure ou la résolution de problèmes de performance — des environnements où il y a toujours quelque chose à optimiser.",
     },
     projects: {
       title: "Projets",
@@ -249,7 +249,7 @@ const translations = {
     contact: {
       title: "Restons en contact",
       description:
-        "Jeune diplômé ouvert aux postes juniors, aux stages et aux collaborations en développement full-stack, DevOps, ingénierie des bases de données ou analyse de données. N'hésitez pas à me contacter.",
+        "Ouvert aux stages et aux postes à temps plein dans des entreprises SaaS, des agences ou de grandes équipes d'ingénierie. Si le travail implique des pipelines de données, l'automatisation d'infrastructure ou la performance — parlons-en.",
       copyright: "Tous droits réservés.",
     },
   },

@@ -51,7 +51,12 @@ export const Experience = () => {
           </div>
         </a>
 
-        <div className={styles.certCard}>
+        <a
+          href={`${import.meta.env.BASE_URL}Aicertification.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.certCard}
+        >
           <img
             src={getImageUrl("projects/CODOT.png")}
             alt="Council of Deans of Thailand Certification"
@@ -60,11 +65,12 @@ export const Experience = () => {
           <div className={styles.certInfo}>
             <span className={styles.certIssuer}>Council of Deans of Thailand</span>
             <span className={styles.certName}>Academic Certification</span>
+            <span className={styles.certVerify}>View ↗</span>
           </div>
-        </div>
+        </a>
 
         <a
-          href="/Graduation.pdf"
+          href={`${import.meta.env.BASE_URL}Graduation.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.certCard}
@@ -80,6 +86,20 @@ export const Experience = () => {
             <span className={styles.certVerify}>View ↗</span>
           </div>
         </a>
+      </div>
+
+      {/* Involvement */}
+      <h3 className={styles.involvementTitle}>Involvement</h3>
+      <div className={styles.involvementGrid}>
+        <div className={styles.involvementCard}>
+          <p className={styles.involvementRole}>Attendee</p>
+          <p className={styles.involvementName}>Day One — AI Expo &amp; Conference</p>
+          <p className={styles.involvementMeta}>Bangkok, Thailand</p>
+          <p className={styles.involvementDesc}>
+            Attended a national AI exposition showcasing applied machine learning, generative AI tools,
+            and real-world deployment case studies from industry practitioners and researchers.
+          </p>
+        </div>
       </div>
     </section>
   );

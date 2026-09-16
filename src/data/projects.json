@@ -5,7 +5,8 @@
     "description": "A comprehensive reference guide for Docker and Kubernetes featuring best practices, commands, and real-world examples.",
     "skills": ["Docker", "K8's","kutectl"],
     "category": "DevOps",
-    "source": "https://github.com/Hermann1412/docker-reference"
+    "source": "https://github.com/Hermann1412/docker-reference",
+    "report": "https://github.com/Hermann1412/docker-reference/blob/main/README.md"
   },
   {
     "title": "ODAC - Object Detection & Classification",

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermann N'Zi Ngenda — Data Engineer</title>
+  <style>
+    :root {
+      --accent:  #2563eb;
+      --accent2: #1e40af;
+      --light:   #eff6ff;
+      --border:  #bfdbfe;
+      --text:    #1e293b;
+      --muted:   #475569;
+      --tag-bg:  #dbeafe;
+      --tag-text:#1e40af;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: var(--text);
+      background: #fff;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0;
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .banner {
+      background: var(--accent);
+      color: #fff;
+      padding: 28px 36px 22px;
+      display: flex; align-items: center; gap: 24px;
+    }
+    .banner img {
+      width: 128px; height: 128px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.6); flex-shrink: 0;
+    }
+    .banner-text { flex: 1; }
+    .banner h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.3px; }
+    .banner .subtitle { font-size: 11px; opacity: 0.88; margin: 4px 0 10px; letter-spacing: 0.2px; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 10.5px; }
+    .contact-row a { color: #fff; opacity: 0.9; }
+    .contact-row a:hover { opacity: 1; text-decoration: underline; }
+    .contact-row span { opacity: 0.9; }
+
+    .body { padding: 20px 36px 32px; }
+
+    h2 {
+      font-size: 10.5px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.3px;
+      color: var(--accent2);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 3px; margin: 16px 0 8px;
+    }
+
+    .entry { margin-bottom: 9px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .entry-header h3 { font-size: 11px; font-weight: 700; color: var(--text); }
+    .entry-header .links { font-size: 10px; white-space: nowrap; flex-shrink: 0; }
+    .entry-meta { font-size: 10px; color: var(--muted); margin: 1px 0 3px; }
+    ul { padding-left: 15px; }
+    li { margin-bottom: 2px; color: var(--text); }
+
+    .two-col { display: grid; grid-template-columns: 1.7fr 1fr; gap: 0 28px; }
+
+    .skill-group { margin-bottom: 9px; }
+    .skill-group h3 { font-size: 10.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .skill-row { display: flex; flex-wrap: wrap; gap: 3px 5px; }
+    .skill-tag {
+      background: var(--tag-bg); color: var(--tag-text);
+      border: 1px solid var(--border); border-radius: 3px;
+      padding: 1px 7px; font-size: 9.5px; font-weight: 600;
+    }
+    .skill-tag-muted {
+      background: #f1f5f9; color: var(--muted);
+      border: 1px solid #e2e8f0; border-radius: 3px;
+      padding: 1px 7px; font-size: 9.5px; font-weight: 600;
+    }
+
+    .certs-grid { display: flex; flex-direction: column; gap: 3px; }
+    .cert-entry {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding: 3px 0;
+    }
+    .cert-body { flex: 1; min-width: 0; }
+    .cert-entry h3 { font-size: 10px; font-weight: 700; color: var(--text); display: inline; }
+    .cert-entry .cert-meta { font-size: 9px; color: var(--muted); display: inline; margin-left: 5px; }
+    .cert-verify {
+      font-size: 9px; font-weight: 600; color: var(--accent);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .cert-verify:hover { text-decoration: underline; }
+
+    .summary-box {
+      background: var(--light); border-left: 3px solid var(--accent);
+      border-radius: 4px; padding: 8px 12px;
+      font-size: 11px; color: var(--text); margin-bottom: 10px;
+    }
+
+    .philosophy {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 6px; padding: 10px 14px 10px 16px;
+      margin-bottom: 2px; display: flex; gap: 12px; align-items: flex-start;
+      print-color-adjust: exact; -webkit-print-color-adjust: exact;
+    }
+    .philosophy-bar {
+      width: 3px; min-height: 100%;
+      background: linear-gradient(180deg, #60a5fa, #a78bfa);
+      border-radius: 2px; flex-shrink: 0; align-self: stretch;
+      print-color-adjust: exact; -webkit-print-color-adjust: exact;
+    }
+    .philosophy p { font-size: 10.5px; color: #e2e8f0; font-style: italic; line-height: 1.65; }
+    .philosophy strong { color: #93c5fd; font-style: normal; }
+
+    .other-work { display: flex; flex-direction: column; gap: 5px; }
+    .other-item {
+      display: grid; grid-template-columns: 1fr auto; gap: 0 10px;
+      border-left: 2px solid var(--border);
+      padding-left: 8px; padding-top: 3px; padding-bottom: 3px;
+    }
+    .other-main { display: flex; flex-direction: column; gap: 1px; }
+    .other-title { font-size: 10.5px; font-weight: 700; color: var(--text); }
+    .other-desc { font-size: 9.5px; color: var(--muted); font-style: italic; }
+    .other-right { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+    .other-tech { font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+    .other-links { font-size: 9.5px; white-space: nowrap; }
+
+    .involvement-entry { margin-bottom: 7px; }
+    .involvement-entry h3 { font-size: 10.5px; font-weight: 700; color: var(--text); }
+    .involvement-entry .inv-meta { font-size: 10px; color: var(--muted); margin: 1px 0 2px; }
+    .involvement-entry p { font-size: 10px; color: var(--text); }
+
+    @media print {
+      body { font-size: 10.5px; }
+      .body { padding: 14px 24px 20px; }
+      .banner { padding: 20px 24px 16px; }
+      @page { size: A4; margin: 0.8cm; }
+      .cert-entry, .summary-box, .skill-tag, .banner, .philosophy, .philosophy-bar {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="profile.png" alt="Hermann N'Zi Ngenda" />
+    <div class="banner-text">
+      <h1>Hermann N'Zi Ngenda</h1>
+      <p class="subtitle">Data Engineer &nbsp;·&nbsp; ETL / ELT Pipelines &nbsp;·&nbsp; SQL &amp; T-SQL &nbsp;·&nbsp; Python &nbsp;·&nbsp; Data Warehousing &nbsp;·&nbsp; Snowflake &nbsp;·&nbsp; Cloud</p>
+      <div class="contact-row">
+        <a href="mailto:www.ngendahermann14@gmail.com">www.ngendahermann14@gmail.com</a>
+        <a href="mailto:u6411076@au.edu">u6411076@au.edu</a>
+        <a href="tel:+66951975823">+66 95 197 5823</a>
+        <a href="https://www.linkedin.com/in/hermann-ngenda-3310582b7/">LinkedIn ↗</a>
+        <a href="https://github.com/Hermann1412">github.com/Hermann1412</a>
+        <a href="https://hermann1412.github.io/my-portfolio">Portfolio ↗</a>
+        <span>Bangkok, Thailand</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <h2>Summary</h2>
+    <div class="summary-box">
+      Computer Engineering graduate specializing in Data Engineering, with hands-on experience designing ETL pipelines, dimensional data warehouses, and streaming ingestion systems using SQL, Python, and production databases (MySQL, SQL Server, MongoDB). Familiar with Snowflake, Airflow, dbt, and cloud data tooling (AWS/Azure) for orchestration and analytics.
+    </div>
+
+    <div class="two-col">
+
+      <div>
+
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Bachelor of Engineering — Computer Engineering</h3>
+            <span class="links">Apr 2026</span>
+          </div>
+          <div class="entry-meta">Assumption University of Thailand</div>
+          <ul>
+            <li>Capstone: ODAC — real-time AI object-detection system with a MySQL event storage pipeline, published at NCEE21 national engineering conference.</li>
+          </ul>
+        </div>
+
+        <h2>Experience</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Independent Data Engineering Projects</h3>
+            <span class="links">2024 – Present</span>
+          </div>
+          <div class="entry-meta">Self-directed · MySQL / SQL Server · Python · Node.js / FastAPI</div>
+          <ul>
+            <li>Designed and built a medallion-architecture data warehouse (bronze → silver → gold) end-to-end, writing T-SQL stored-procedure ETL and a star-schema gold layer that powers KPI dashboards on retention, trends, and inventory.</li>
+            <li>Built a relational schema and Stripe-webhook event-ingestion pipeline for an e-commerce platform, with Redis caching to keep high-frequency reads fast under load.</li>
+            <li>Built a streaming ingestion pipeline processing live CCTV frames through a CNN classifier and persisting classification events to MySQL in near real time; findings published at the NCEE21 national engineering conference.</li>
+            <li>Owned every stage solo — schema design, transformation logic, ingestion, and reporting layer — across four production-deployed systems.</li>
+          </ul>
+        </div>
+
+        <h2>Projects</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Data Warehouse + ETL Pipeline + Advanced Analytics</h3>
+            <span class="links"><a href="https://github.com/Hermann1412/sql-data-warehouse-project">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">MySQL · T-SQL · SQL Server · ETL · Star Schema</div>
+          <ul>
+            <li>Medallion-pattern warehouse (bronze → silver → gold) with a T-SQL stored-procedure ETL pipeline and a star-schema gold layer powering KPI dashboards on retention, trends, and inventory.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>Abona — E-Commerce Data Pipeline &amp; Event Ingestion</h3>
+            <span class="links"><a href="https://abona-3ve.pages.dev/login">Live ↗</a> &nbsp;|&nbsp; <a href="https://github.com/Hermann1412/Abona">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">MySQL / MariaDB · Redis · Node.js · FastAPI · Python · Stripe Webhooks</div>
+          <ul>
+            <li>Normalised relational schema for orders, accounts, and inventory, with a Stripe-webhook event-ingestion layer and Redis caching for high-frequency reads.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>ODAC — AI Object Detection (Streaming Data Pipeline)</h3>
+            <span class="links"><a href="https://github.com/Hermann1412/-ODAC-project">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">Python · TensorFlow · Keras · OpenCV · MySQL · NumPy</div>
+          <ul>
+            <li>Streaming pipeline processing live CCTV frames through a CNN classifier, persisting events to MySQL in near real time; research published at NCEE21.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3>153Shelf — Library Platform (Document Store &amp; Aggregation)</h3>
+            <span class="links"><a href="https://153shelf.vercel.app/">Live ↗</a> &nbsp;|&nbsp; <a href="https://github.com/Hermann1412/153shelf">GitHub ↗</a></span>
+          </div>
+          <div class="entry-meta">MongoDB · Express · React (TypeScript) · Node.js · Vercel</div>
+          <ul>
+            <li>MongoDB document schema with embedded sub-documents and aggregation pipelines for borrowing-activity and popularity reporting.</li>
+          </ul>
+        </div>
+
+        <h2>Other Work</h2>
+        <div class="other-work">
+          <div class="other-item">
+            <div class="other-main">
+              <span class="other-title">HopeSpring — Social Chat Platform</span>
+              <span class="other-desc">MySQL relational schema with FK integrity</span>
+            </div>
+            <div class="other-right">
+              <span class="other-tech">PHP · MySQL</span>
+              <span class="other-links"><a href="https://hopespring.infinityfreeapp.com/">Live ↗</a></span>
+            </div>
+          </div>
+          <div class="other-item">
+            <div class="other-main">
+              <span class="other-title">Resume Builder</span>
+              <span class="other-desc">MongoDB-backed document store for user data</span>
+            </div>
+            <div class="other-right">
+              <span class="other-tech">React · MongoDB · OpenAI API</span>
+              <span class="other-links"><a href="https://resume-builder-bdm.pages.dev/">Live ↗</a></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div>
+
+        <h2>Technical Skills</h2>
+
+        <div class="skill-group">
+          <h3>Core: SQL, Python &amp; Pipelines</h3>
+          <div class="skill-row">
+            <span class="skill-tag">SQL / T-SQL</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">ETL / ELT</span>
+            <span class="skill-tag">Stream Processing</span>
+            <span class="skill-tag">Dimensional Modelling</span>
+            <span class="skill-tag">Star Schema</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Warehousing, Orchestration &amp; Cloud</h3>
+          <div class="skill-row">
+            <span class="skill-tag">Snowflake</span>
+            <span class="skill-tag">Airflow</span>
+            <span class="skill-tag">dbt</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <div class="skill-row">
+            <span class="skill-tag">MySQL / MariaDB</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Also Familiar With</h3>
+          <div class="skill-row">
+            <span class="skill-tag-muted">JavaScript / TypeScript</span>
+            <span class="skill-tag-muted">Node.js</span>
+            <span class="skill-tag-muted">FastAPI</span>
+          </div>
+        </div>
+
+        <h2>Certifications</h2>
+        <div class="certs-grid">
+
+          <div class="cert-entry">
+            <div class="cert-body">
+              <h3>IBM — Networking &amp; Security</h3>
+              <span class="cert-meta">Coursera, verified</span>
+            </div>
+            <a class="cert-verify" href="https://coursera.org/verify/9PL8YON81ZSP" target="_blank">Verify ↗</a>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-body">
+              <h3>Graduation Status Certification</h3>
+              <span class="cert-meta">Assumption University, May 2026</span>
+            </div>
+            <a class="cert-verify" href="Graduation.pdf" target="_blank">PDF ↗</a>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-body">
+              <h3>Academic Achievement Certification</h3>
+              <span class="cert-meta">Council of Deans of Thailand</span>
+            </div>
+            <a class="cert-verify" href="Aicertification.pdf" target="_blank">PDF ↗</a>
+          </div>
+
+        </div>
+
+        <h2>Languages</h2>
+        <div class="entry">
+          <div><strong>French</strong> — Native &nbsp;·&nbsp; <strong>English</strong> — Fluent (Full Professional Proficiency)</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

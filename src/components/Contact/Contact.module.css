@@ -58,12 +58,14 @@
   transform: translateX(6px);
 }
 
-.link img {
+.link img,
+.link svg {
   width: 22px;
   height: 22px;
   object-fit: contain;
   flex-shrink: 0;
   opacity: 0.8;
+  color: var(--color-text);
 }
 
 .link a {

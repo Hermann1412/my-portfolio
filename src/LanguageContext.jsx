@@ -260,7 +260,7 @@ export const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     const saved = localStorage.getItem("portfolio-language");
-    return saved === "fr" ? "fr" : "en";
+    return saved === "en" ? "en" : "fr";
   });
 
   useEffect(() => {

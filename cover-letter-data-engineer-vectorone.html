@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermann N'Zi Ngenda — Cover Letter — VectorOne Data Engineer</title>
+  <style>
+    :root {
+      --accent:  #2563eb;
+      --accent2: #1e40af;
+      --light:   #eff6ff;
+      --border:  #bfdbfe;
+      --text:    #1e293b;
+      --muted:   #475569;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11.5px;
+      color: var(--text);
+      background: #fff;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .banner {
+      background: var(--accent);
+      color: #fff;
+      padding: 28px 40px 22px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .banner img {
+      width: 128px; height: 128px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.6); flex-shrink: 0;
+    }
+    .banner-text { flex: 1; }
+    .banner h1 { font-size: 20px; font-weight: 700; letter-spacing: 0.3px; }
+    .banner .subtitle { font-size: 11px; opacity: 0.88; margin: 3px 0 8px; letter-spacing: 0.2px; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 5px 16px; font-size: 10.5px; }
+    .contact-row a { color: #fff; opacity: 0.9; }
+    .contact-row span { opacity: 0.9; }
+
+    .letter { padding: 32px 40px 40px; }
+
+    .date-block {
+      font-size: 10.5px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .recipient {
+      margin-bottom: 20px;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+    .recipient strong { color: var(--text); }
+
+    .greeting {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent2);
+      margin-bottom: 14px;
+    }
+
+    .body-text {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    .highlight-box {
+      background: var(--light);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin: 16px 0;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .highlight-box strong { color: var(--accent2); }
+
+    .closing {
+      margin-top: 24px;
+      line-height: 1.6;
+    }
+    .signature {
+      margin-top: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--accent2);
+    }
+
+    .links-footer {
+      margin-top: 4px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    @media print {
+      body { font-size: 11px; }
+      .letter { padding: 20px 28px 28px; }
+      .banner { padding: 20px 28px 16px; }
+      @page { size: A4; margin: 1cm; }
+      .banner, .highlight-box {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="profile.png" alt="Hermann N'Zi Ngenda" />
+    <div class="banner-text">
+      <h1>Hermann N'Zi Ngenda</h1>
+      <p class="subtitle">Data Engineer &nbsp;·&nbsp; ETL / ELT &nbsp;·&nbsp; SQL &amp; Python &nbsp;·&nbsp; Data Warehousing &nbsp;·&nbsp; Snowflake</p>
+      <div class="contact-row">
+        <a href="mailto:www.ngendahermann14@gmail.com">www.ngendahermann14@gmail.com</a>
+        <a href="tel:+66951975823">+66 95 197 5823</a>
+        <a href="https://www.linkedin.com/in/hermann-ngenda-3310582b7/">LinkedIn ↗</a>
+        <a href="https://github.com/Hermann1412">GitHub ↗</a>
+        <a href="https://hermann1412.github.io/my-portfolio">Portfolio ↗</a>
+        <span>Bangkok, Thailand</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter">
+
+    <div class="date-block">
+      June 28, 2026
+    </div>
+
+    <div class="recipient">
+      <strong>Hiring Team</strong><br />
+      VectorOne<br />
+      <em>Data Engineer Position</em>
+    </div>
+
+    <p class="greeting">Dear VectorOne Hiring Team,</p>
+
+    <p class="body-text">
+      I am writing to express my strong interest in the <strong>Data Engineer</strong> position at VectorOne. Your mission — using technology to reimagine the financial lifeblood of business and modernise century-old CFO processes — resonates with how I think about engineering: the value isn't in the tool, it's in what the tool makes possible. Turning messy, operational financial data into clean, reliable datasets that power real decisions is exactly the kind of problem I want to spend my time on.
+    </p>
+
+    <p class="body-text">
+      I recently graduated with a Bachelor of Engineering in Computer Engineering from Assumption University of Thailand. While the degree gave me strong foundations in data structures, algorithms, and database systems, the work I'm most proud of is what I built outside the classroom — and it maps directly to what you're looking for.
+    </p>
+
+    <div class="highlight-box">
+      <strong>What I've built that's relevant to this role:</strong>
+      <ul style="padding-left: 16px; margin-top: 6px;">
+        <li style="margin-bottom: 4px;"><strong>3-layer Data Warehouse (Bronze → Silver → Gold):</strong> Designed and implemented a full ETL pipeline in T-SQL using stored procedures, views, and scheduled jobs. Raw data lands in the bronze layer, gets cleansed and conformed in silver, and surfaces as a star-schema model in gold — optimised for BI queries on user retention, borrowing trends, and inventory utilisation. This medallion architecture mirrors the same patterns used in Snowflake and dbt workflows.</li>
+        <li style="margin-bottom: 4px;"><strong>Real-time event ingestion (Abona E-Commerce):</strong> Wired Stripe webhooks to capture payment events directly into MySQL, creating a durable, queryable audit trail — the same source-of-truth pattern that underpins production data pipelines. Also integrated Redis as a caching layer to reduce redundant reads during high-frequency operations.</li>
+        <li style="margin-bottom: 4px;"><strong>Streaming data pipeline (ODAC — published research):</strong> Built a Python pipeline that processes live CCTV frames through a CNN classifier and persists classification events to MySQL in near real time — managing the full data lifecycle from source ingestion through transformation and structured load. This work was peer-reviewed and published at the NCEE21 national engineering conference.</li>
+      </ul>
+    </div>
+
+    <p class="body-text">
+      Your posting mentions proficiency in <strong>SQL, Python</strong>, and exposure to the <strong>modern data stack — Snowflake, Spark, dbt</strong>. SQL and Python are the languages I've written the most production code in: complex T-SQL stored procedures for ETL automation, Python for data ingestion and ML pipeline scripting, and raw SQL for schema design across MySQL, SQL Server, and MongoDB aggregation pipelines. I have studied Snowflake's architecture — virtual warehouses, stages, Snowpipe, time travel — and understand how its separation of storage and compute changes how you think about ELT versus traditional ETL. I'm eager to deepen that into hands-on production usage at VectorOne.
+    </p>
+
+    <p class="body-text">
+      What draws me most to this role is the emphasis on <strong>turning messy, raw inputs into clean datasets</strong> and <strong>enforcing quality standards with reusable transformations</strong>. That's not just a job description to me — it's what I designed my warehouse project around. Each layer has a single responsibility, transformations are codified in stored procedures (not ad-hoc scripts), and the gold layer is structured so downstream consumers never have to wonder whether the data is trustworthy. I want to bring that same discipline to VectorOne's data infrastructure.
+    </p>
+
+    <p class="body-text">
+      I also bring <strong>curiosity and scrappy problem-solving</strong> — two qualities your posting highlights. I've shipped five live, publicly deployed applications across different tech stacks, published peer-reviewed ML research, and taught myself containerisation and orchestration deeply enough to produce a public Kubernetes reference guide. I learn fast, I build things that work, and I care about getting the details right because in data engineering, the details are the product.
+    </p>
+
+    <p class="body-text">
+      I would welcome the opportunity to discuss how my pipeline-building experience, SQL depth, and appetite for the modern data stack can contribute to VectorOne's mission of transforming financial operations through technology. I am available for remote work and flexible on travel for workshops.
+    </p>
+
+    <div class="closing">
+      Thank you for your time and consideration.<br /><br />
+      Sincerely,
+      <div class="signature">Hermann N'Zi Ngenda</div>
+      <div class="links-footer">
+        <a href="mailto:www.ngendahermann14@gmail.com">www.ngendahermann14@gmail.com</a> &nbsp;·&nbsp;
+        <a href="https://github.com/Hermann1412">github.com/Hermann1412</a> &nbsp;·&nbsp;
+        <a href="https://hermann1412.github.io/my-portfolio">Portfolio</a> &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/hermann-ngenda-3310582b7/">LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

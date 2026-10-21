@@ -3,15 +3,18 @@
 .container {
   color: var(--color-text);
   margin-top: 100px;
-  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95) 0%, rgba(224, 236, 255, 0.92) 100%);
+  background: var(--surface-2);
   border-top: 1px solid var(--surface-border);
   width: 100%;
-  padding: 72px var(--section-inline-padding) 48px;
+  padding: 56px var(--section-inline-padding) 36px;
 }
 
 .inner {
   max-width: var(--section-max-width);
   margin: 0 auto;
+}
+
+.row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,18 +24,17 @@
 }
 
 .text h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
+  font-family: var(--font-outfit);
   margin-bottom: 12px;
-  background: linear-gradient(135deg, var(--heading-from) 0%, var(--heading-to) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
+  color: var(--color-text);
+  line-height: 1.25;
 }
 
 .text p {
-  font-size: 16px;
+  font-size: 15px;
+  font-family: var(--font-roboto);
   font-weight: 400;
   color: var(--color-text-secondary);
   line-height: 1.65;
@@ -44,14 +46,14 @@
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 18px;
+  gap: 16px;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 14px;
-  transition: transform 0.25s ease;
+  gap: 12px;
+  transition: transform 0.2s ease;
 }
 
 .link:hover {
@@ -60,21 +62,22 @@
 
 .link img,
 .link svg {
-  width: 22px;
-  height: 22px;
+  width: 19px;
+  height: 19px;
   object-fit: contain;
   flex-shrink: 0;
-  opacity: 0.8;
-  color: var(--color-text);
+  opacity: 0.75;
+  color: var(--color-text-secondary);
 }
 
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: var(--font-outfit);
+  font-size: 14px;
+  font-weight: 500;
   transition: color 0.2s ease;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   padding-bottom: 2px;
 }
 
@@ -87,22 +90,28 @@
   width: 100%;
   height: 1px;
   background: var(--surface-border);
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .copyright {
   width: 100%;
   text-align: center;
-  margin-top: 20px;
-  font-size: 13px;
+  margin-top: 18px;
+  font-family: var(--font-outfit);
+  font-size: 12.5px;
   color: var(--color-text-secondary);
 }
 
+.prompt {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
 @media screen and (max-width: 830px) {
-  .inner {
+  .row {
     flex-direction: column;
     align-items: center;
-    gap: 36px;
+    gap: 32px;
     text-align: center;
   }
 
@@ -117,7 +126,7 @@
   }
 
   .text h2 {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .links {

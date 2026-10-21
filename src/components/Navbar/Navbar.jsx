@@ -5,6 +5,14 @@ import { getImageUrl } from "../../utils";
 import { ThemeContext } from "../../ThemeContext.jsx";
 import { LanguageContext } from "../../LanguageContext.jsx";
 
+const NAV_LINKS = [
+  { href: "#about", key: "about", file: "about.jsx" },
+  { href: "#more_background", key: "background", file: "background.json" },
+  { href: "#experience", key: "experience", file: "experience.ts" },
+  { href: "#projects", key: "projects", file: "projects.tsx" },
+  { href: "#contact", key: "contact", file: "contact.sh" },
+];
+
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -25,7 +33,9 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="#">Hermann</a>
+      <a className={styles.title} href="#">
+        <span className={styles.prompt}>~/</span>hermann
+      </a>
       <div className={styles.menu}>
         <img
           className={styles.menuBtn}
@@ -39,21 +49,14 @@ export const Navbar = () => {
           />
         <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
         onClick={() => setMenuOpen(false)}>
-          <li>
-            <a href="#about">{t.nav.about}</a>
-          </li>
-          <li>
-            <a href="#more_background">{t.nav.background}</a>
-          </li>
-          <li>
-            <a href="#experience">{t.nav.experience}</a>
-          </li>
-          <li>
-            <a href="#projects">{t.nav.projects}</a>
-          </li>
-          <li>
-            <a href="#contact">{t.nav.contact}</a>
-          </li>
+          {NAV_LINKS.map(({ href, key, file }) => (
+            <li key={key}>
+              <a href={href} className={styles.tab}>
+                {t.nav[key]}
+                <span className={styles.ext}>{file}</span>
+              </a>
+            </li>
+          ))}
           <li>
             <button
               type="button"
@@ -63,7 +66,7 @@ export const Navbar = () => {
                 copyPortfolioLink();
               }}
             >
-              {copied ? t.nav.copied : t.nav.copyLink}
+              {copied ? `✓ ${t.nav.copied}` : `$ ${t.nav.copyLink}`}
             </button>
           </li>
           <li>
@@ -89,7 +92,7 @@ export const Navbar = () => {
               }}
               aria-label="Toggle theme"
             >
-              {isDark ? `☀️ ${t.nav.themeLight}` : `🌙 ${t.nav.themeDark}`}
+              {isDark ? `☀ ${t.nav.themeLight}` : `● ${t.nav.themeDark}`}
             </button>
           </li>
         </ul>

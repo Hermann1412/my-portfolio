@@ -18,6 +18,7 @@ export const Projects = () => {
 
   return (
     <section className={styles.container} id="projects">
+      <p className="sectionKicker">04 — projects.tsx</p>
       <div className={styles.titleRow}>
         <h2 className={styles.title}>{t.projects.title}</h2>
         <span className={styles.totalCount}>{projects.length}</span>

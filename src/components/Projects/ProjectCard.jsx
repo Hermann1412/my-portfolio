@@ -6,14 +6,18 @@ import { LanguageContext } from "../../LanguageContext.jsx";
 import { Lightbox } from "../Lightbox/Lightbox.jsx";
 
 const CATEGORY_COLORS = {
-  "Web Dev":   { bg: "rgba(10,87,82,0.12)",    border: "rgba(10,87,82,0.35)",    text: "#0a5752" },
-  "Mobile":    { bg: "rgba(55,48,163,0.12)",   border: "rgba(55,48,163,0.35)",   text: "#3730a3" },
-  "AI / ML":   { bg: "rgba(180,83,9,0.12)",    border: "rgba(180,83,9,0.35)",    text: "#b45309" },
-  "Game Dev":  { bg: "rgba(185,28,28,0.12)",   border: "rgba(185,28,28,0.35)",   text: "#b91c1c" },
-  "Database":  { bg: "rgba(29,78,216,0.12)",   border: "rgba(29,78,216,0.35)",   text: "#1d4ed8" },
-  "Networking":{ bg: "rgba(109,40,217,0.12)",  border: "rgba(109,40,217,0.35)",  text: "#6d28d9" },
-  "Security":  { bg: "rgba(139,58,16,0.12)",   border: "rgba(139,58,16,0.35)",   text: "#8b3a10" },
+  "Web Dev":                        "var(--color-primary)",
+  "Mobile":                         "var(--accent-purple)",
+  "AI / ML":                        "var(--accent-amber)",
+  "Game Dev":                       "var(--color-danger)",
+  "DevOps":                         "var(--color-danger)",
+  "Database / Data-analytics":      "var(--color-accent)",
+  "Networking / Networking security": "var(--accent-purple)",
+  "Security":                       "var(--accent-amber)",
 };
+
+const slugify = (str) =>
+  str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source, report, certificate, category },
@@ -26,7 +30,7 @@ export const ProjectCard = ({
   const localizedProject = t.projects.localizedCards[title];
   const localizedTitle = localizedProject?.title || title;
   const localizedDescription = localizedProject?.description || description;
-  const categoryStyle = CATEGORY_COLORS[category] || {};
+  const categoryColor = CATEGORY_COLORS[category] || "var(--color-accent)";
 
   const openLightbox = () => { setLightboxIdx(0); setLightboxOpen(true); };
   const closeLightbox = () => setLightboxOpen(false);
@@ -36,6 +40,11 @@ export const ProjectCard = ({
   return (
     <>
       <div className={styles.container}>
+        <div className={`winBar ${styles.cardBar}`}>
+          <span className="winDots"><span></span><span></span><span></span></span>
+          <span className="winBarLabel">{slugify(title)}.config</span>
+        </div>
+
         <div
           className={styles.imageWrapper}
           onClick={openLightbox}
@@ -52,11 +61,7 @@ export const ProjectCard = ({
           {category && (
             <span
               className={styles.badge}
-              style={{
-                background: categoryStyle.bg,
-                border: `1px solid ${categoryStyle.border}`,
-                color: categoryStyle.text,
-              }}
+              style={{ borderColor: categoryColor, color: categoryColor }}
             >
               {category}
             </span>
@@ -74,29 +79,29 @@ export const ProjectCard = ({
 
           <ul className={styles.skills}>
             {skills.map((skill, id) => (
-              <li key={id} className={styles.skill}>{skill}</li>
+              <li key={id} className={styles.skill}>"{skill}"</li>
             ))}
           </ul>
 
           <div className={styles.links}>
             {demo && (
               <a href={demo} className={`${styles.link} ${styles.linkPrimary}`} target="_blank" rel="noopener noreferrer">
-                {t.projects.demo}
+                $ {t.projects.demo}
               </a>
             )}
             {source && (
               <a href={source} className={`${styles.link} ${styles.linkSecondary}`} target="_blank" rel="noopener noreferrer">
-                {t.projects.source}
+                $ {t.projects.source}
               </a>
             )}
             {report && (
               <a href={report} className={`${styles.link} ${styles.linkReport}`} target="_blank" rel="noopener noreferrer">
-                {t.projects.report}
+                $ {t.projects.report}
               </a>
             )}
             {certificate && (
               <a href={certificate} className={`${styles.link} ${styles.linkCert}`} target="_blank" rel="noopener noreferrer">
-                {t.projects.certificate}
+                $ {t.projects.certificate}
               </a>
             )}
           </div>

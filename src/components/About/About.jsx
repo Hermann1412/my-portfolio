@@ -17,13 +17,20 @@ export const About = () => {
 
   return (
     <section className={styles.container} id="about">
+      <p className="sectionKicker">01 — about.jsx</p>
       <h2 className={styles.title}>{t.about.title}</h2>
       <div className={styles.content}>
-        <img
-          src={getImageUrl("about/hermann1.png")}
-          alt="Me sitting with a laptop"
-          className={styles.aboutImage}
-        />
+        <div className={styles.imageFrame}>
+          <div className={`winBar ${styles.imageBar}`}>
+            <span className="winDots"><span></span><span></span><span></span></span>
+            <span className="winBarLabel">desk.jpg</span>
+          </div>
+          <img
+            src={getImageUrl("about/hermann1.png")}
+            alt="Me sitting with a laptop"
+            className={styles.aboutImage}
+          />
+        </div>
         <ul className={styles.aboutItems}>
           {t.about.items.map((item, i) => (
             <li key={i} className={styles.aboutItem}>

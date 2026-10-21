@@ -1,33 +1,36 @@
 :root {
-  /* Color — dark IDE theme (default) */
-  --color-text: #c9d1d9;
-  --color-text-secondary: #8b949e;
-  --color-primary: #3fb950;
-  --color-primary-dark: #2ea043;
-  --color-secondary: #161b22;
-  --color-dark: #010409;
-  --color-bg: #0d1117;
-  --color-accent: #58a6ff;
-  --color-danger: #f85149;
-  --color-on-primary: #04110a;
+  /* Color — soft modern SaaS (light default) */
+  --color-text: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-primary: #4f46e5;
+  --color-primary-dark: #4338ca;
+  --color-secondary: #ffffff;
+  --color-dark: #0f172a;
+  --color-bg: #f8fafc;
+  --color-accent: #0ea5e9;
+  --color-danger: #ef4444;
+  --color-on-primary: #ffffff;
 
-  --accent-amber: #d29922;
-  --accent-purple: #bc8cff;
+  --accent-amber: #f59e0b;
+  --accent-purple: #8b5cf6;
+  --accent-emerald: #10b981;
+  --accent-rose: #f43f5e;
 
-  /* Gradient text */
-  --heading-from: #58a6ff;
-  --heading-to:   #3fb950;
+  /* Reserved gradient — used sparingly (hero name, one CTA) */
+  --heading-from: #4f46e5;
+  --heading-to:   #0ea5e9;
 
-  --surface-1: rgba(22, 27, 34, 0.75);
-  --surface-2: rgba(13, 17, 23, 0.92);
-  --surface-border: rgba(139, 148, 158, 0.25);
-  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.45);
+  --surface-1: rgba(79, 70, 229, 0.045);
+  --surface-2: #ffffff;
+  --surface-border: rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 20px 45px rgba(15, 23, 42, 0.07);
+  --shadow-hover: 0 28px 60px rgba(79, 70, 229, 0.16);
   --section-max-width: 1180px;
   --section-inline-padding: clamp(16px, 5vw, 64px);
 
   /* Font */
-  --font-roboto: "Space Grotesk";
-  --font-outfit: "JetBrains Mono";
+  --font-roboto: "Inter";
+  --font-outfit: "Plus Jakarta Sans";
 
   /* Spacing */
   --spacing-xs: 4px;
@@ -38,27 +41,30 @@
   --spacing-2xl: 48px;
 }
 
-/* Light Mode — VS Code / GitHub Light analog */
-[data-theme="light"] {
-  --color-text: #1f2328;
-  --color-text-secondary: #57606a;
-  --color-primary: #1a7f37;
-  --color-primary-dark: #116329;
-  --color-secondary: #ffffff;
-  --color-dark: #ffffff;
-  --color-bg: #f6f8fa;
-  --color-accent: #0969da;
-  --color-danger: #cf222e;
-  --color-on-primary: #ffffff;
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-text: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+  --color-secondary: #141b2e;
+  --color-dark: #060b16;
+  --color-bg: #0b1120;
+  --color-accent: #38bdf8;
+  --color-danger: #f87171;
+  --color-on-primary: #0b1120;
 
-  --accent-amber: #9a6700;
-  --accent-purple: #8250df;
+  --accent-amber: #fbbf24;
+  --accent-purple: #a78bfa;
+  --accent-emerald: #34d399;
+  --accent-rose: #fb7185;
 
-  --heading-from: #0969da;
-  --heading-to:   #1a7f37;
+  --heading-from: #818cf8;
+  --heading-to:   #38bdf8;
 
-  --surface-1: rgba(255, 255, 255, 0.75);
-  --surface-2: rgba(255, 255, 255, 0.96);
-  --surface-border: rgba(31, 35, 40, 0.15);
-  --shadow-soft: 0 14px 36px rgba(31, 35, 40, 0.12);
+  --surface-1: rgba(129, 140, 248, 0.08);
+  --surface-2: #111827;
+  --surface-border: rgba(226, 232, 240, 0.08);
+  --shadow-soft: 0 20px 45px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 28px 60px rgba(129, 140, 248, 0.22);
 }

@@ -2,17 +2,17 @@
 
 .container {
   color: var(--color-text);
-  margin: 100px auto 80px;
+  margin: 110px auto 90px;
   max-width: var(--section-max-width);
   padding: 0 var(--section-inline-padding);
 }
 
 .title {
   color: var(--color-text);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   font-family: var(--font-outfit);
-  margin-bottom: 36px;
+  margin-bottom: 44px;
 }
 
 /* ── Marquee ─────────────────────────────────── */
@@ -44,7 +44,7 @@
 .marqueeTrack {
   display: flex;
   width: max-content;
-  gap: 28px;
+  gap: 32px;
   animation: marquee 28s linear infinite;
 }
 
@@ -63,81 +63,77 @@
 }
 
 .skillImageContainer {
-  background: var(--surface-1);
+  background: var(--color-bg);
   border: 1px solid var(--surface-border);
-  border-radius: 8px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 76px;
-  height: 76px;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  width: 84px;
+  height: 84px;
+  transition: all 0.3s ease;
 }
 
 .skill:hover .skillImageContainer {
   border-color: var(--color-primary);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
 }
 
 .skillImageContainer img {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
 .skill p {
-  font-size: 11.5px;
-  font-family: var(--font-outfit);
-  font-weight: 500;
-  color: var(--color-text-secondary);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text);
   white-space: nowrap;
 }
 
 /* ── Message card ─────────────────────────────── */
 .message {
-  margin-top: 36px;
+  position: relative;
+  margin-top: 44px;
   background: var(--surface-2);
   border: 1px solid var(--surface-border);
-  border-left: 3px solid var(--color-accent);
-  border-radius: 8px;
-  padding: 24px 28px;
+  border-radius: 24px;
+  padding: 36px 40px 32px;
+  box-shadow: var(--shadow-soft);
 }
 
-.messageComment {
+.quoteMark {
   display: block;
   font-family: var(--font-outfit);
-  color: var(--color-text-secondary);
-  opacity: 0.6;
-  font-size: 13px;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.25;
+  margin-bottom: -12px;
 }
 
 .message p {
-  font-size: 15px;
-  font-family: var(--font-roboto);
+  font-size: 16.5px;
   color: var(--color-text-secondary);
-  line-height: 1.8;
-  padding: 6px 0;
-}
-
-/* ── Sub-kickers (certs / involvement) ────────── */
-.subKicker {
-  margin-top: 52px;
+  line-height: 1.85;
 }
 
 /* ── Certifications ──────────────────────────── */
 .certsTitle,
 .involvementTitle {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   font-family: var(--font-outfit);
-  margin: 0 0 20px;
+  margin: 60px 0 24px;
   color: var(--color-text);
 }
 
 .certsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .certCard {
@@ -145,57 +141,50 @@
   flex-direction: column;
   background: var(--surface-2);
   border: 1px solid var(--surface-border);
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: var(--shadow-soft);
   text-decoration: none;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .certCard:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-primary);
-}
-
-.cardBar {
-  border-radius: 0;
-  padding: 8px 12px;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .certImg {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   object-position: center top;
-  border-bottom: 1px solid var(--surface-border);
 }
 
 .certInfo {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 14px 18px 18px;
+  padding: 18px 20px 20px;
 }
 
 .certIssuer {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 700;
-  font-family: var(--font-outfit);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--color-accent);
 }
 
 .certName {
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text);
   font-family: var(--font-outfit);
 }
 
 .certVerify {
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 600;
-  font-family: var(--font-outfit);
   color: var(--color-primary);
   margin-top: 4px;
 }
@@ -210,28 +199,28 @@
 .involvementCard {
   background: var(--surface-2);
   border: 1px solid var(--surface-border);
-  border-radius: 10px;
-  padding: 22px 26px;
-  border-left: 3px solid var(--accent-amber);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  border-radius: 20px;
+  padding: 26px 28px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s ease;
 }
 
 .involvementCard:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .involvementRole {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 700;
-  font-family: var(--font-outfit);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: var(--accent-amber);
+  color: var(--color-accent);
   margin-bottom: 6px;
 }
 
 .involvementName {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--color-text);
   font-family: var(--font-outfit);
@@ -239,15 +228,13 @@
 }
 
 .involvementMeta {
-  font-size: 12px;
-  font-family: var(--font-outfit);
+  font-size: 12.5px;
   color: var(--color-text-secondary);
   margin-bottom: 10px;
 }
 
 .involvementDesc {
-  font-size: 13.5px;
-  font-family: var(--font-roboto);
+  font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.7;
 }
@@ -259,20 +246,20 @@
   }
 
   .marqueeTrack {
-    gap: 20px;
+    gap: 22px;
   }
 
   .skillImageContainer {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
   }
 
   .skillImageContainer img {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
   }
 
   .message {
-    padding: 20px 18px;
+    padding: 26px 22px 24px;
   }
 }

@@ -6,11 +6,11 @@ import { ThemeContext } from "../../ThemeContext.jsx";
 import { LanguageContext } from "../../LanguageContext.jsx";
 
 const NAV_LINKS = [
-  { href: "#about", key: "about", file: "about.jsx" },
-  { href: "#more_background", key: "background", file: "background.json" },
-  { href: "#experience", key: "experience", file: "experience.ts" },
-  { href: "#projects", key: "projects", file: "projects.tsx" },
-  { href: "#contact", key: "contact", file: "contact.sh" },
+  { href: "#about", key: "about" },
+  { href: "#more_background", key: "background" },
+  { href: "#experience", key: "experience" },
+  { href: "#projects", key: "projects" },
+  { href: "#contact", key: "contact" },
 ];
 
 export const Navbar = () => {
@@ -32,71 +32,74 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
-      <a className={styles.title} href="#">
-        <span className={styles.prompt}>~/</span>hermann
-      </a>
-      <div className={styles.menu}>
-        <img
-          className={styles.menuBtn}
-          src={
-            menuOpen
-              ? getImageUrl("nav/closeIcon.png")
-              : getImageUrl("nav/menuIcon.png")
-            }
-            alt="menu-button"
-            onClick={() => setMenuOpen(!menuOpen)}
-          />
-        <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-        onClick={() => setMenuOpen(false)}>
-          {NAV_LINKS.map(({ href, key, file }) => (
-            <li key={key}>
-              <a href={href} className={styles.tab}>
-                {t.nav[key]}
-                <span className={styles.ext}>{file}</span>
-              </a>
+    <div className={styles.navbarWrap}>
+      <nav className={styles.navbar}>
+        <a className={styles.title} href="#">Hermann</a>
+        <div className={styles.menu}>
+          <img
+            className={styles.menuBtn}
+            src={
+              menuOpen
+                ? getImageUrl("nav/closeIcon.png")
+                : getImageUrl("nav/menuIcon.png")
+              }
+              alt="menu-button"
+              onClick={() => setMenuOpen(!menuOpen)}
+            />
+          <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
+          onClick={() => setMenuOpen(false)}>
+            {NAV_LINKS.map(({ href, key }) => (
+              <li key={key}>
+                <a href={href} className={styles.navLink}>
+                  {t.nav[key]}
+                </a>
+              </li>
+            ))}
+            <li className={styles.divider} aria-hidden="true" />
+            <li>
+              <button
+                type="button"
+                className={`${styles.iconBtn} ${copied ? styles.copied : ""}`}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  copyPortfolioLink();
+                }}
+                aria-label={t.nav.copyLink}
+                title={copied ? t.nav.copied : t.nav.copyLink}
+              >
+                {copied ? "✓" : "🔗"}
+              </button>
             </li>
-          ))}
-          <li>
-            <button
-              type="button"
-              className={`${styles.copyBtn} ${copied ? styles.copied : ""}`}
-              onClick={(event) => {
-                event.stopPropagation();
-                copyPortfolioLink();
-              }}
-            >
-              {copied ? `✓ ${t.nav.copied}` : `$ ${t.nav.copyLink}`}
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              className={styles.langBtn}
-              onClick={(event) => {
-                event.stopPropagation();
-                toggleLanguage();
-              }}
-              aria-label={t.nav.languageToggle}
-            >
-              {language === "en" ? "FR" : "EN"}
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              className={styles.themeBtn}
-              onClick={(event) => {
-                event.stopPropagation();
-                toggleTheme();
-              }}
-              aria-label="Toggle theme"
-            >
-              {isDark ? `☀ ${t.nav.themeLight}` : `● ${t.nav.themeDark}`}
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            <li>
+              <button
+                type="button"
+                className={styles.pillBtn}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  toggleLanguage();
+                }}
+                aria-label={t.nav.languageToggle}
+              >
+                {language === "en" ? "FR" : "EN"}
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                className={styles.iconBtn}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  toggleTheme();
+                }}
+                aria-label="Toggle theme"
+                title={isDark ? t.nav.themeLight : t.nav.themeDark}
+              >
+                {isDark ? "☀️" : "🌙"}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 };

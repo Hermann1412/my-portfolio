@@ -2,11 +2,11 @@
 
 .container {
   color: var(--color-text);
-  margin-top: 100px;
+  margin-top: 110px;
   background: var(--surface-2);
   border-top: 1px solid var(--surface-border);
   width: 100%;
-  padding: 56px var(--section-inline-padding) 36px;
+  padding: 64px var(--section-inline-padding) 36px;
 }
 
 .inner {
@@ -21,24 +21,24 @@
   align-items: flex-start;
   gap: 60px;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
 
 .text h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   font-family: var(--font-outfit);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: var(--color-text);
   line-height: 1.25;
 }
 
 .text p {
-  font-size: 15px;
-  font-family: var(--font-roboto);
+  font-size: 15.5px;
   font-weight: 400;
   color: var(--color-text-secondary);
-  line-height: 1.65;
-  max-width: 340px;
+  line-height: 1.7;
+  max-width: 360px;
 }
 
 .links {
@@ -52,59 +52,58 @@
 .link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   transition: transform 0.2s ease;
 }
 
 .link:hover {
-  transform: translateX(6px);
+  transform: translateX(4px);
+}
+
+.iconBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--surface-1);
+  flex-shrink: 0;
 }
 
 .link img,
 .link svg {
-  width: 19px;
-  height: 19px;
+  width: 17px;
+  height: 17px;
   object-fit: contain;
-  flex-shrink: 0;
-  opacity: 0.75;
-  color: var(--color-text-secondary);
+  color: var(--color-primary);
 }
 
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-family: var(--font-outfit);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 14.5px;
+  font-weight: 600;
   transition: color 0.2s ease;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
 }
 
 .link a:hover {
   color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
 }
 
 .divider {
   width: 100%;
   height: 1px;
   background: var(--surface-border);
-  margin-top: 40px;
+  margin-top: 48px;
 }
 
 .copyright {
   width: 100%;
   text-align: center;
-  margin-top: 18px;
-  font-family: var(--font-outfit);
-  font-size: 12.5px;
+  margin-top: 20px;
+  font-size: 13px;
   color: var(--color-text-secondary);
-}
-
-.prompt {
-  color: var(--color-primary);
-  font-weight: 700;
 }
 
 @media screen and (max-width: 830px) {
@@ -126,7 +125,7 @@
   }
 
   .text h2 {
-    font-size: 26px;
+    font-size: 27px;
   }
 
   .links {

@@ -6,18 +6,15 @@ import { LanguageContext } from "../../LanguageContext.jsx";
 import { Lightbox } from "../Lightbox/Lightbox.jsx";
 
 const CATEGORY_COLORS = {
-  "Web Dev":                        "var(--color-primary)",
-  "Mobile":                         "var(--accent-purple)",
-  "AI / ML":                        "var(--accent-amber)",
-  "Game Dev":                       "var(--color-danger)",
-  "DevOps":                         "var(--color-danger)",
-  "Database / Data-analytics":      "var(--color-accent)",
-  "Networking / Networking security": "var(--accent-purple)",
-  "Security":                       "var(--accent-amber)",
+  "Web Dev":                           "#0f9d6f",
+  "Mobile":                            "#7c3aed",
+  "AI / ML":                           "#b45309",
+  "Game Dev":                          "#e11d48",
+  "DevOps":                            "#e11d48",
+  "Database / Data-analytics":         "#0284c7",
+  "Networking / Networking security":  "#7c3aed",
+  "Security":                          "#b45309",
 };
-
-const slugify = (str) =>
-  str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source, report, certificate, category },
@@ -30,7 +27,7 @@ export const ProjectCard = ({
   const localizedProject = t.projects.localizedCards[title];
   const localizedTitle = localizedProject?.title || title;
   const localizedDescription = localizedProject?.description || description;
-  const categoryColor = CATEGORY_COLORS[category] || "var(--color-accent)";
+  const categoryColor = CATEGORY_COLORS[category] || "var(--color-primary)";
 
   const openLightbox = () => { setLightboxIdx(0); setLightboxOpen(true); };
   const closeLightbox = () => setLightboxOpen(false);
@@ -40,11 +37,6 @@ export const ProjectCard = ({
   return (
     <>
       <div className={styles.container}>
-        <div className={`winBar ${styles.cardBar}`}>
-          <span className="winDots"><span></span><span></span><span></span></span>
-          <span className="winBarLabel">{slugify(title)}.config</span>
-        </div>
-
         <div
           className={styles.imageWrapper}
           onClick={openLightbox}
@@ -61,14 +53,14 @@ export const ProjectCard = ({
           {category && (
             <span
               className={styles.badge}
-              style={{ borderColor: categoryColor, color: categoryColor }}
+              style={{ color: categoryColor }}
             >
               {category}
             </span>
           )}
           <div className={styles.imageOverlay}>
             <span className={styles.zoomIcon}>
-              {images.length > 1 ? `⊞ ${images.length} photos` : '⊕ View'}
+              {images.length > 1 ? `View ${images.length} photos` : 'View case study'}
             </span>
           </div>
         </div>
@@ -79,29 +71,29 @@ export const ProjectCard = ({
 
           <ul className={styles.skills}>
             {skills.map((skill, id) => (
-              <li key={id} className={styles.skill}>"{skill}"</li>
+              <li key={id} className={styles.skill}>{skill}</li>
             ))}
           </ul>
 
           <div className={styles.links}>
             {demo && (
               <a href={demo} className={`${styles.link} ${styles.linkPrimary}`} target="_blank" rel="noopener noreferrer">
-                $ {t.projects.demo}
+                {t.projects.demo}
               </a>
             )}
             {source && (
               <a href={source} className={`${styles.link} ${styles.linkSecondary}`} target="_blank" rel="noopener noreferrer">
-                $ {t.projects.source}
+                {t.projects.source}
               </a>
             )}
             {report && (
-              <a href={report} className={`${styles.link} ${styles.linkReport}`} target="_blank" rel="noopener noreferrer">
-                $ {t.projects.report}
+              <a href={report} className={`${styles.link} ${styles.linkSecondary}`} target="_blank" rel="noopener noreferrer">
+                {t.projects.report}
               </a>
             )}
             {certificate && (
-              <a href={certificate} className={`${styles.link} ${styles.linkCert}`} target="_blank" rel="noopener noreferrer">
-                $ {t.projects.certificate}
+              <a href={certificate} className={`${styles.link} ${styles.linkSecondary}`} target="_blank" rel="noopener noreferrer">
+                {t.projects.certificate}
               </a>
             )}
           </div>

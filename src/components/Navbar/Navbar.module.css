@@ -1,31 +1,35 @@
 @import "../../vars.css";
 
-.navbar {
+.navbarWrap {
   position: sticky;
   top: 0;
+  z-index: 20;
+  padding: 14px var(--section-inline-padding) 0;
+}
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px var(--section-inline-padding);
-  z-index: 20;
+  margin: 0 auto;
+  max-width: var(--section-max-width);
+  padding: 10px 10px 10px 26px;
   background: var(--surface-2);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--surface-border);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 800;
   text-decoration: none;
   color: var(--color-text);
-  letter-spacing: -0.2px;
   font-family: var(--font-outfit);
+  letter-spacing: -0.3px;
   flex-shrink: 0;
-}
-
-.prompt {
-  color: var(--color-primary);
 }
 
 .menu {
@@ -42,141 +46,85 @@
   align-items: center;
   gap: 2px;
   list-style: none;
-  overflow-x: auto;
-  scrollbar-width: none;
 }
 
-.menuItems::-webkit-scrollbar {
-  display: none;
-}
-
-.menuItems li {
-  flex-shrink: 0;
-}
-
-.tab {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
+.navLink {
   font-family: var(--font-outfit);
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14.5px;
+  font-weight: 600;
   color: var(--color-text-secondary);
   text-decoration: none;
-  padding: 8px 12px;
-  border-bottom: 2px solid transparent;
-  border-right: 1px solid var(--surface-border);
+  padding: 9px 16px;
+  border-radius: 999px;
   white-space: nowrap;
-  flex-shrink: 0;
+  display: inline-block;
 }
 
-.tab:hover {
-  color: var(--color-text);
+.navLink:hover {
+  color: var(--color-primary);
   background: var(--surface-1);
-  border-bottom-color: var(--color-accent);
 }
 
-.ext {
-  color: var(--accent-amber);
-  font-size: 11px;
-  opacity: 0.75;
-  white-space: nowrap;
+.divider {
+  width: 1px;
+  height: 22px;
+  background: var(--surface-border);
+  margin: 0 8px;
 }
 
-.copyBtn {
-  font-family: var(--font-outfit);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-on-primary);
-  background: var(--color-primary);
-  border: 1px solid var(--color-primary-dark);
-  border-radius: 6px;
-  padding: 8px 14px;
-  margin-left: 14px;
-  white-space: nowrap;
-  flex-shrink: 0;
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 15px;
+  background: var(--surface-1);
+  border: 1px solid transparent;
 }
 
-.copyBtn:hover {
-  background: var(--color-primary-dark);
+.iconBtn:hover {
+  border-color: var(--surface-border);
+  transform: translateY(-1px);
 }
 
 .copied {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
+  background: var(--color-primary);
   color: var(--color-on-primary);
 }
 
-.themeBtn {
-  font-family: var(--font-outfit);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text);
-  background: transparent;
-  border: 1px solid var(--surface-border);
-  border-radius: 6px;
-  padding: 8px 12px;
-  margin-left: 8px;
-  transition: all 0.25s ease;
-}
-
-.themeBtn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
-.langBtn {
+.pillBtn {
   font-family: var(--font-outfit);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   color: var(--color-text);
-  background: transparent;
-  border: 1px solid var(--surface-border);
-  border-radius: 6px;
-  padding: 8px 12px;
-  margin-left: 8px;
-  transition: all 0.25s ease;
+  background: var(--surface-1);
+  border-radius: 999px;
+  padding: 9px 14px;
+  margin: 0 4px;
 }
 
-.langBtn:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-/* Hide file extensions once the tab row gets tight, before we fall back to the mobile menu */
-@media screen and (max-width: 1600px) {
-  .ext {
-    display: none;
-  }
-
-  .tab {
-    padding: 8px 10px;
-  }
-
-  .copyBtn {
-    padding: 8px 12px;
-    margin-left: 10px;
-  }
-
-  .themeBtn,
-  .langBtn {
-    padding: 8px 10px;
-    margin-left: 6px;
-  }
+.pillBtn:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 @media screen and (max-width: 830px) {
+  .navbarWrap {
+    padding: 14px var(--section-inline-padding) 0;
+  }
+
   .navbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    border-radius: 20px;
+    padding: 12px 18px;
   }
 
   .menu {
     position: fixed;
     right: var(--section-inline-padding);
-    top: 64px;
+    top: 76px;
     flex-direction: column;
     align-items: flex-end;
     gap: 0;
@@ -188,59 +136,42 @@
     cursor: pointer;
     width: 26px;
     height: 26px;
-    filter: invert(0.85);
   }
 
   .menuItems {
     display: none;
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
-    border-radius: 8px;
-    background: var(--color-secondary);
+    gap: 2px;
+    border-radius: 18px;
+    background: var(--surface-2);
     backdrop-filter: blur(10px);
     border: 1px solid var(--surface-border);
-    padding: 8px 0;
+    padding: 12px;
     box-shadow: var(--shadow-soft);
     min-width: 220px;
     margin-top: 10px;
   }
 
-  .menuItems li {
-    border-bottom: 1px solid var(--surface-border);
+  .navLink {
+    display: block;
+    padding: 12px 16px;
+    font-size: 15px;
   }
 
-  .menuItems li:last-child {
-    border-bottom: none;
+  .divider {
+    width: 100%;
+    height: 1px;
+    margin: 6px 0;
   }
 
-  .tab {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-right: none;
-  }
-
-  .copyBtn {
-    margin: 12px 16px 0;
-    width: calc(100% - 32px);
-    border-radius: 6px;
-    padding: 10px 14px;
-  }
-
-  .themeBtn {
-    margin: 8px 16px 0;
-    width: calc(100% - 32px);
-    border-radius: 6px;
-    padding: 10px 14px;
-  }
-
-  .langBtn {
-    margin: 8px 16px 0;
-    width: calc(100% - 32px);
-    border-radius: 6px;
-    padding: 10px 14px;
+  .iconBtn,
+  .pillBtn {
+    width: calc(100% - 0px);
+    border-radius: 12px;
+    margin: 2px 0;
+    padding: 10px 16px;
+    justify-content: flex-start;
   }
 
   .menuOpen {

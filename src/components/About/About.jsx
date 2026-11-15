@@ -5,6 +5,7 @@ import { getImageUrl } from "../../utils";
 import { LanguageContext } from "../../LanguageContext.jsx";
 
 const ITEM_ICONS = [
+  { src: "skills/cisco.png",     alt: "Network Engineer icon" },
   { src: "about/cursorIcon.png", alt: "Frontend icon" },
   { src: "about/serverIcon.png", alt: "Backend icon" },
   { src: "about/uiIcon.png",     alt: "UI Design icon" },
@@ -20,11 +21,18 @@ export const About = () => {
       <span className="eyebrow">Who I am</span>
       <h2 className={styles.title}>{t.about.title}</h2>
       <div className={styles.content}>
-        <img
-          src={getImageUrl("about/hermann1.png")}
-          alt="Me sitting with a laptop"
-          className={styles.aboutImage}
-        />
+        <div className={styles.aboutImages}>
+          <img
+            src={getImageUrl("about/hermann1.png")}
+            alt="Hermann portrait"
+            className={styles.aboutImage}
+          />
+          <img
+            src={getImageUrl("about/hermann2.png")}
+            alt="Hermann portrait"
+            className={styles.aboutImage}
+          />
+        </div>
         <ul className={styles.aboutItems}>
           {t.about.items.map((item, i) => (
             <li key={i} className={styles.aboutItem}>

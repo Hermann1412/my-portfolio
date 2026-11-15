@@ -19,51 +19,12 @@
 .description {
   color: var(--color-text-secondary);
   font-size: 16px;
-  margin-bottom: 44px;
   line-height: 1.7;
   max-width: 700px;
-}
-
-.building {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.CLBuilding,
-.AUbuilding {
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--surface-border);
-  transition: all 0.3s ease;
-}
-
-.CLBuilding:hover,
-.AUbuilding:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-}
-
-.CLBuilding img,
-.AUbuilding img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  display: block;
 }
 
 @media screen and (max-width: 830px) {
   .container {
     margin-top: 72px;
-  }
-
-  .building {
-    grid-template-columns: 1fr;
-  }
-
-  .CLBuilding img,
-  .AUbuilding img {
-    height: 280px;
   }
 }

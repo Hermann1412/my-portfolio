@@ -17,10 +17,10 @@ const translations = {
     hero: {
       title: "Hi, I'm Hermann",
       description:
-        "Recent Computer Engineering graduate looking to join a SaaS company, agency, or large engineering team — building data pipelines, automating infrastructure, and solving performance problems from front-end to production.",
+        "Network Engineer with a Computer Engineering background spanning full-stack development, DevOps, and data engineering. I design and maintain reliable network infrastructure, and stay hands-on with data pipelines, automation, and performance work across the stack.",
       contactButton: "Contact Me",
       projectsButton: "View Projects",
-      statusBadge: "Open to opportunities",
+      statusBadge: "Network Engineer",
       statProjects: "Projects",
       statSkills: "Skills",
       statLanguages: "Spoken Languages",
@@ -28,6 +28,11 @@ const translations = {
     about: {
       title: "About",
       items: [
+        {
+          title: "Network Engineer",
+          description:
+            "Designing, deploying, and maintaining secure network infrastructure — routing, switching, subnetting, and traffic analysis. Experienced with Cisco environments, firewall configuration, and troubleshooting production networks.",
+        },
         {
           title: "Frontend Developer",
           description:
@@ -63,7 +68,7 @@ const translations = {
     experience: {
       title: "Experience",
       message:
-        "I recently graduated and am open to internships and full-time roles at SaaS companies, agencies, or large engineering teams. Through my studies and personal projects I have developed practical skills in full-stack development, DevOps tooling, database design, and data analysis. I am especially drawn to environments where the work involves building data pipelines, automating infrastructure, or solving performance problems — places where there is always something to optimise and the impact of getting it right is visible.",
+        "I currently work as a Network Engineer, designing and maintaining network infrastructure day to day. Alongside that, I keep building on my broader engineering background — full-stack development, DevOps tooling, database design, and data analysis — through personal projects. I'm especially drawn to problems involving infrastructure, automation, and performance — places where there is always something to optimise and the impact of getting it right is visible.",
     },
     projects: {
       title: "Projects",
@@ -122,7 +127,7 @@ const translations = {
     },
     contact: {
       title: "Let's Connect",
-      description: "Open to internships and full-time roles at SaaS companies, agencies, or large engineering teams. If the work involves data pipelines, infrastructure automation, or performance — let's talk.",
+      description: "Currently working as a Network Engineer, and always happy to connect on infrastructure, automation, or interesting technical projects. If that's what brought you here — let's talk.",
       copyright: "All rights reserved.",
     },
   },
@@ -143,10 +148,10 @@ const translations = {
     hero: {
       title: "Bonjour, je suis Hermann",
       description:
-        "Jeune diplômé en ingénierie informatique, souhaitant rejoindre une entreprise SaaS, une agence ou une grande équipe d'ingénierie — pour construire des pipelines de données, automatiser l'infrastructure et résoudre des problèmes de performance, du front-end à la production.",
+        "Ingénieur Réseau avec une formation en génie informatique couvrant le développement full-stack, le DevOps et l'ingénierie des données. Je conçois et maintiens des infrastructures réseau fiables, tout en restant impliqué dans les pipelines de données, l'automatisation et l'optimisation des performances.",
       contactButton: "Me contacter",
       projectsButton: "Voir les projets",
-      statusBadge: "Ouvert aux opportunités",
+      statusBadge: "Ingénieur Réseau",
       statProjects: "Projets",
       statSkills: "Compétences",
       statLanguages: "Langues parlées",
@@ -154,6 +159,11 @@ const translations = {
     about: {
       title: "A propos",
       items: [
+        {
+          title: "Ingénieur Réseau",
+          description:
+            "Conception, déploiement et maintenance d'infrastructures réseau sécurisées — routage, commutation, sous-réseaux et analyse de trafic. Expérience avec les environnements Cisco, la configuration de pare-feu et le dépannage de réseaux en production.",
+        },
         {
           title: "Developpeur Frontend",
           description:
@@ -189,7 +199,7 @@ const translations = {
     experience: {
       title: "Experience",
       message:
-        "Je viens de terminer mes études et je suis ouvert aux stages et aux postes à temps plein dans des entreprises SaaS, des agences ou de grandes équipes d'ingénierie. À travers mes projets académiques et personnels, j'ai développé des compétences concrètes en développement full-stack, DevOps, conception de bases de données et analyse de données. Je suis particulièrement attiré par les environnements où le travail implique la construction de pipelines de données, l'automatisation d'infrastructure ou la résolution de problèmes de performance — des environnements où il y a toujours quelque chose à optimiser.",
+        "Je travaille actuellement comme Ingénieur Réseau, où je conçois et maintiens l'infrastructure réseau au quotidien. En parallèle, je continue à développer mes compétences plus larges — développement full-stack, outils DevOps, conception de bases de données et analyse de données — à travers des projets personnels. Je suis particulièrement attiré par les problématiques d'infrastructure, d'automatisation et de performance — des environnements où il y a toujours quelque chose à optimiser.",
     },
     projects: {
       title: "Projets",
@@ -249,7 +259,7 @@ const translations = {
     contact: {
       title: "Restons en contact",
       description:
-        "Ouvert aux stages et aux postes à temps plein dans des entreprises SaaS, des agences ou de grandes équipes d'ingénierie. Si le travail implique des pipelines de données, l'automatisation d'infrastructure ou la performance — parlons-en.",
+        "Actuellement Ingénieur Réseau, toujours partant pour échanger sur l'infrastructure, l'automatisation ou des projets techniques intéressants. Si c'est ce qui vous amène ici — parlons-en.",
       copyright: "Tous droits réservés.",
     },
   },

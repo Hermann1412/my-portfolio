@@ -29,23 +29,26 @@
 }
 
 .aboutImages {
-  width: 34%;
-  min-width: 260px;
-  display: flex;
-  flex-direction: column;
+  width: 36%;
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   align-self: stretch;
 }
 
 .aboutImage {
   width: 100%;
-  flex: 1;
-  min-height: 160px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
+}
+
+.aboutImageMain {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 11;
 }
 
 .aboutItems {

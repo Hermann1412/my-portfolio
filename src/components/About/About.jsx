@@ -23,6 +23,11 @@ export const About = () => {
       <div className={styles.content}>
         <div className={styles.aboutImages}>
           <img
+            src={getImageUrl("about/hermann-fieldwork.png")}
+            alt="Hermann doing network cabling fieldwork"
+            className={`${styles.aboutImage} ${styles.aboutImageMain}`}
+          />
+          <img
             src={getImageUrl("about/hermann1.png")}
             alt="Hermann portrait"
             className={styles.aboutImage}

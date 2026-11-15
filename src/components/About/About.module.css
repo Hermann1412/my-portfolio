@@ -29,26 +29,46 @@
 }
 
 .aboutImages {
+  position: relative;
   width: 36%;
   min-width: 280px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-self: stretch;
+  aspect-ratio: 3 / 4;
+  align-self: center;
 }
 
 .aboutImage {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  position: absolute;
   object-fit: cover;
   display: block;
-  border-radius: 20px;
+  border-radius: 22px;
   box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.aboutImageMain {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 11;
+.aboutImage:first-child {
+  top: 0;
+  left: 0;
+  width: 82%;
+  height: 82%;
+  z-index: 1;
+}
+
+.aboutImageOffset {
+  bottom: 0;
+  right: 0;
+  width: 56%;
+  height: 56%;
+  z-index: 2;
+  border: 5px solid var(--surface-2);
+  box-shadow: var(--shadow-hover);
+}
+
+.aboutImages:hover .aboutImage:first-child {
+  transform: translate(-4px, -4px);
+}
+
+.aboutImages:hover .aboutImageOffset {
+  transform: translate(4px, 4px);
 }
 
 .aboutItems {
